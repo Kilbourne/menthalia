@@ -28,6 +28,12 @@ add_filter('body_class', __NAMESPACE__ . '\\body_class');
  * Clean up the_excerpt()
  */
 function excerpt_more() {
-  return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
+  return ' &hellip; <a class="read-more" href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+function remove_admin_css() {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+}
+add_action('admin_bar_init', __NAMESPACE__ . '\\remove_admin_css');
+
