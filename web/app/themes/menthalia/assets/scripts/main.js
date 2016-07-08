@@ -18,7 +18,7 @@
     // All pages
     'common': {
       init: function() {
-        // JavaScript to be fired on all pages
+        var s = skrollr.init();
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -34,9 +34,34 @@
       }
     },
     // About us page, note the change from about-us to about_us.
-    'about_us': {
+    'page_template_service': {
       init: function() {
-        // JavaScript to be fired on the about us page
+
+        $('.service>a').click(function(event) {
+            event.preventDefault();
+
+            var parent =$(this).parent();
+            if(parent.hasClass('active')) return;
+            $('.service').removeClass('active');
+            parent.addClass('active');
+            var i =parent.index('.service');
+            $('.service-desc.active').fadeOut('400', function() {
+              $(this).removeClass('active');
+              $('.service-desc').eq(i).fadeIn('400', function() {
+                  $(this).addClass('active');
+              });
+            });
+            
+        });
+      }
+    },
+    'blog':{
+      init:function(){
+        $.fn.almComplete = function(alm){
+          
+          alm.disable_ajax &&
+          $('.posts-navigation').show();
+        };
       }
     }
   };
