@@ -1,12 +1,8 @@
-<header class="banner">
-  <div class="container">
-    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-    <nav class="nav-primary">
-      <?php
-      if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-      endif;
-      ?>
-    </nav>
-  </div>
+<?php 
+  $site_claim=!!get_field('claim_home','options')?get_field('claim_home','options'):get_bloginfo( 'description' );
+ ?>
+<header class="banner skrollable "  data-0="height:158px;"  data-80="height:118px;">
+ <h1 class="site-claim"><?php echo $site_claim; ?></h1>
+
 </header>
+<?php echo do_shortcode('[responsive_menu_pro]') ?>
