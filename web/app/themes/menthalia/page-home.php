@@ -100,7 +100,7 @@ if (have_posts()) : ?>
 <div class="posts-container">
 <?php 
 $args=	array(
-		'posts_per_page'   => 4,
+		'posts_per_page'   => 3,
 	
 	);
 global $wp_query;

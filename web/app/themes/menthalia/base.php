@@ -21,7 +21,7 @@ use Roots\Sage\Wrapper;
     ?>
     
       <div class="content row">
-        <main class="main">
+        <main class="main skrollable "  data-0="margin-top:158px;"  data-80="margin-top:118px;">
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
         <?php if (Setup\display_sidebar()) : ?>
