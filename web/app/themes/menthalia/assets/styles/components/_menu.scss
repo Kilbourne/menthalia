@@ -1,0 +1,96 @@
+#responsive_menu_pro_button {
+    position: fixed;
+    @include scut-coords(0 0 n n);
+    width: 76px;
+    height: 158px;
+    padding: 0px;
+    margin: 0px;
+    background-color: $brand-primary;    
+    z-index: $menu-zindex;
+    &:hover {
+        background-color: $menu-hover-color;
+    }    
+    &.responsive_menu_pro_button_active {
+        background-color: $menubutton-active-color;
+    }
+    #responsive_menu_x,#responsive_menu_pro_three_lines {
+        @include absolute-centered(absolute);
+    }
+    #responsive_menu_x {
+        font-size: 32px;
+        font-weight: 600;        
+    }
+    #responsive_menu_pro_three_lines {
+        .responsive_menu_pro_button_line {
+            height: 3px !important;
+            margin-bottom: 5px !important;
+            width: 75% !important;
+        }
+    }
+}
+
+#responsive_menu_pro {
+    z-index: 888;
+    top: $menu-fullheight;
+    padding-top: 0px !important;
+    .responsive_menu_pro_menu li {
+        height: 82px;
+        &:hover {
+            background-color: $menu-hover-color;
+        }
+        a {
+            @include vertical-centered(absolute);
+            text-transform: uppercase;
+            text-align: center;
+            border-top: medium none !important;
+            &:hover {
+                background-color: transparent !important;
+            }
+        }
+    }
+}
+body.admin-bar{
+    #responsive_menu_pro {
+            margin-top: 32px;
+    }
+}
+#responsive_menu_pro_title {
+    box-sizing: border-box !important;
+    display: none;
+    position: fixed;
+    width: $menu-width !important;
+    height: $menu-fullheight;
+    right: -$menu-width;
+    overflow: hidden ! important;
+    z-index: $menu-zindex;            
+    padding-top: 20px ! important;
+    padding-right: 76px ! important;
+    padding-bottom: 20px ! important;
+    padding-left: 12.5px;
+    margin-left: 0px ! important;
+    background: rgb(239, 239, 239) none repeat scroll 0% 0% ! important;
+    box-shadow:-2px 0px 8px -5px #333333;
+    color: rgb(56, 56, 56) ! important;
+    font-size: 16px ! important;
+    text-decoration: none ! important;
+    white-space: nowrap ! important;
+    .responsive_menu_title_image {
+        display: inline-block;
+        max-width: 216px;
+        vertical-align: middle;
+        margin-right: 10px;
+        @include vertical-centered(absolute);        
+    }
+}
+
+
+#responsive_menu_pro .responsive_menu_pro_menu li.current-menu-item > a,
+#responsive_menu_pro .responsive_menu_pro_menu li.current-menu-item > .responsive_menu_pro_append_link,
+#responsive_menu_pro .responsive_menu_pro_menu li.current_page_item > a,
+#responsive_menu_pro .responsive_menu_pro_menu li.current_page_item > .responsive_menu_pro_append_link {
+    background: auto !important;
+}
+
+#responsive_menu_pro .responsive_menu_pro_menu li.current-menu-item {
+    background: $menu-active-color;
+}

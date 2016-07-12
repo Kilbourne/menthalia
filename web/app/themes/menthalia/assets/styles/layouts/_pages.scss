@@ -1,0 +1,499 @@
+// FRONT PAGE
+
+#video_background {
+    width: 100%;
+    float: left;
+}
+
+.aree-menthalia {
+    width: 100%;
+    padding: 0 5%;
+    @media( max-width: $areachild-breakpoint) {
+        text-align: center;
+    }
+    .container {
+        width: $homepage-container-width;
+        max-width: 100%;
+        margin: 0px auto;
+        overflow: hidden;
+        >.area-child {
+        	width: $areachild-text-width;
+            // calc fallback
+            max-width: 100%;            
+            max-width: calc(100% + $areachild-text-width - $homepage-container-width);        	
+            float: left;            
+            color: #fff;
+            text-decoration: none;
+			font-weight: 300;
+            &.area-image {
+                width: $areachild-text-image;
+                &.left {
+                    margin-right: $homepage-container-width - $areachild-text-width - $areachild-text-image;
+                }
+                &.right {
+                    float: right;
+                    margin-left: $homepage-container-width - $areachild-text-width - $areachild-text-image;
+                }
+                @media( max-width:$areachild-breakpoint) {
+                    margin: 0 !important;
+                }
+            }
+            &.area-title {
+                font-size: 3.75rem;
+                padding-top: 2.25rem;
+                line-height: 0.8;
+                .subtitle {
+                    font-size: 0.5em;
+                    display: inline-block;
+                }
+                >h3 {
+                    font-weight: 300;
+                    margin: 0;
+                }
+            }
+            &.area-content {}
+            @media( max-width:$areachild-breakpoint) {
+                float: none !important;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+#team {
+    background-color: $grey;    
+    .section-title {
+        background-color: #5F6598;
+    }
+    .team-list {
+        font-size: 0px;
+        display: block;
+        margin: 0px auto;
+        max-width: $homepage-container-width;
+    }
+    .team-member {
+        width: 23%;
+        overflow: hidden;
+        font-size: 1rem;
+        text-align: center;
+        position: relative;
+        margin: 0 1% 1.5rem;
+        @include media-query(palm) {
+            width: 45%;
+            margin: 0 2.5% 1.5rem;
+        }
+        @media( max-width:350px) {
+            width: 95%;
+            margin: 0 2.5% 1.5rem;
+        }
+        >img {
+            border-radius: 50%;
+            display: block;
+            float: left;
+            width: 100%;
+            height: auto;
+        }
+        .team-member-content {
+            display: none;
+            .team-member-container {
+                 	@include absolute-centered(absolute);
+                    h3 {
+                        margin: 1rem 0 0;
+                    }
+                    p {
+                        margin: 0px 0px 0.5rem;
+                        color: $brand-primary;
+                    }                
+            }
+        }
+        &:hover {
+            .team-member-content {
+                display: block;
+                @include absolute(0 0 0 0);
+                background-color: rgb(255, 255, 255);                
+                border-radius: 50%;
+                text-align: center;
+            }
+        }
+    }
+    .member-social {
+        &:after {
+            content: ' ';
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background-image: url('../images/linkdn.svg');
+            background-size: contain;
+        }
+    }
+}
+
+#blog {
+    background-color: $brand-primary;
+    .section-title {
+        background-color: #5F6598;
+        position: relative;
+        z-index: 11;
+    }
+    .blog-background {
+        max-width: 1280px;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        left: 50%;
+        transform: translate( -50%);
+        opacity: 0.4;
+    }
+    .posts-container {
+        max-width: $homepage-container-width;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        z-index: 11;
+        padding-bottom: 1.5rem;
+    }
+    article {
+        width: 31.333%;
+        margin: 0 1%;
+        float: left;
+        border: 1px solid #fff;
+        padding: 8px;
+        color: #fff;
+        font-size: 0.875rem;
+        @include media-query(palm) {
+            width: 47%;
+            margin: 0 1.5% 1.5rem;
+        }
+        @media( max-width:450px) {
+            width: 95%;
+            margin: 0 2.5% 1.5rem;
+        }
+        .entry-image {
+            height: 0;
+            padding-bottom: 54.6%;
+            overflow: hidden;
+            &.demo {
+                background-color: #fff;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .entry-title {
+            line-height: 1;
+height: 44px;
+overflow: hidden;
+            >a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 1rem;
+                font-weight: 400;
+                text-align: center;
+            }
+        }
+    }
+}
+
+// AGENCY
+
+
+.service-list-wrap,
+.service-desc-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.service-desc-wrap {
+    max-width: 900px;
+}
+
+.service-list-background {
+    // adjust
+    background-image: url("http://192.168.1.18/menthalia/app/uploads/2016/07/bg-circle.png");
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.5;
+}
+
+.services-list {
+    padding-bottom: 6rem;
+    text-align:center;
+    position: relative;
+    z-index: 2;
+}
+
+.service-list-cont {
+    background-color: #F15A24;
+}
+
+.service-desc-cont {
+    background-color: #C1272D;
+    padding: 0px 5% 3rem;
+}
+
+#parallax {
+    position:relative;
+    padding-bottom: 64.84%;    
+    .background{
+    	width: 100%;
+    	margin: 0 auto;
+		padding-bottom: 64.84%;
+		position:fixed;
+		//background-attachment: fixed;
+		background-size: 100% auto;
+		//background-position: center 158px;		
+    }
+    .up{
+    	background-image: url('http://192.168.1.18/menthalia/app/uploads/2016/07/1-1.png');
+    	//position:relative;
+    }
+    .down{
+    	background-image: url('http://192.168.1.18/menthalia/app/uploads/2016/07/2.png');
+    	//position:absolute;
+    	//top:0;
+    	z-index: 2;
+    }
+    .fiammifero{
+top: 54%;
+left: 44.5%;
+position: absolute;
+width: 7%;
+    }
+}
+
+
+#services {
+    .service {
+        width: 33.333%;
+        text-align: center;
+        margin: 0;
+		min-width: 266px;
+        >a {
+            text-decoration: none;
+        }
+    }
+    .service-title {
+        color: #fff;
+        font-size: 1.875rem;
+        line-height: 1.2;
+        font-weight: 400;
+    }
+}
+
+.linguetta {
+    position: absolute;
+    top: -66px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 33px solid transparent;
+    border-right: 33px solid transparent;
+    border-bottom: 66px solid #C1272D;
+}
+
+#services {
+    .service-desc {
+        display: none;
+        color: #fff;
+        overflow: hidden;
+        &.active {
+            display: inline-block;
+        }
+    }
+}
+
+#customer-logos {
+    background: #7F7F7F;
+    overflow: hidden;
+    .section-title {
+        background-color: rgb(255, 255, 255);
+        color: rgb(127, 127, 127);
+        margin-top: 2rem;
+        font-size: 2.75rem;
+        font-weight: 600;
+    }
+}
+
+.clienti-list-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+.clienti-list{
+	text-align: center;
+}
+.cliente {
+    width: 33.333%;
+    min-width: 270px;
+    text-align: center;
+    >a {
+        display: inline-block;
+        margin-bottom: 3rem;
+    }
+}
+
+.placeholder {
+    background: #fff;
+    height: 68px;
+    width: 239px;
+}
+
+// BLOG
+.card-column{
+	column-count: 3;
+	column-gap: 1.25rem;
+	padding:1% 2.5%;
+	@media(max-width:950px){
+		column-count: 2;
+	}
+	@media(max-width:650px){
+		column-count: 1;
+	}
+}
+.card{
+	position: relative;
+display: inline-block;
+width: 100%;
+margin-bottom: .75rem;
+background-color: #fff;
+border: 1px solid #e5e5e5;
+border-radius: .25rem;
+	>a>.wp-post-image{
+		max-width: 100%;
+		height:auto;
+	}
+.entry-summary{
+	padding: 1.25rem;
+	>p{
+		margin:0;
+		line-height: 1.6;
+		.read-more{ 
+			font-size:0.85rem;
+			text-decoration: none;
+			color: #662D91;
+		}
+	}
+}
+.entry-title{
+	font-size:1.35rem;
+	margin: 0 0 .75rem;
+	text-align: center;
+	>a{ color: #662D91;
+		text-decoration: none;
+	}
+
+}
+}
+
+.posts-navigation{
+	background-color: #662D91;
+	display:none;
+	.nav-links{ 
+		padding: 2rem 3%;
+		max-width: 1280px;
+		margin: 0 auto;
+		overflow:hidden;
+		>.nav-next,.nav-previous{ display:inline-block}
+		>.nav-next{float:right;}
+		>.nav-previous{float:left;}
+	}
+	a{ text-decoration: none;
+		color:#fff;
+	}
+}
+
+// ECM
+.mese-ecm{
+	display:inline-block;
+	width:100%;
+	padding: .7rem;
+	margin-bottom: 1.5rem;
+	background-color:RGBA(102, 45, 145, 0.79);;
+	color:#fff;
+	font-size:1.5rem;
+	text-transform: uppercase;
+
+}
+article.eventi{
+	
+	position: relative;
+	
+	display: inline-block;
+	vertical-align: top;
+	text-align:left;
+	.data{
+		color: white;
+		background-color: rgb(117, 66, 136);
+		border-radius: 10%;
+		font-size: 1.2rem;
+		display: inline-block;
+		width: 90px;
+		text-align: center;
+		padding: 0.75rem;
+		position: absolute;
+	}
+	.entry-image{
+		box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+	}
+	.wp-post-image{
+		max-width:100%;
+		height:auto;
+		display:block;
+		margin:0 auto;
+	}
+	.entry-title{
+		background-color: rgb(102, 45, 145);
+		padding: 0.5rem;
+		margin-top: 0px;
+		>a{
+			color: rgb(255, 255, 255);
+			text-decoration: none;
+		}
+	}
+	.entry-content{
+		display: inline-block;		
+		strong{color: rgb(85, 85, 116);}
+	}
+}
+body.post-type-archive-eventi{
+	.main{
+		
+		overflow: hidden;
+		max-width: 1280px;
+margin: 0 auto;
+	}
+		article.eventi{
+max-width: 635px;
+margin-bottom: 2rem;
+width: 50%;
+
+margin-right: -4px;
+min-width: 544px;
+	.entry-summary{
+		padding-left: 100px;
+	}
+		.entry-content{
+		margin-left: 2rem;
+		font-size: 0.85rem;
+				>p{
+			margin:0;
+		}
+
+		}
+	}
+}
+body.single-eventi{
+	.main{
+		text-align: center;
+	}
+	article.eventi{		
+		max-width: 900px;
+	}
+}

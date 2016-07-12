@@ -51,6 +51,14 @@ function custom_menthalia_loop($query) {
         $query->set('posts_per_page',-1);
     }
 } 
+function hide_admin_bar() {
+  if (is_page_template('service.php')) {
+    return false;
+  }else{
+    return true;
+  }
+}
+add_filter( 'show_admin_bar',__NAMESPACE__ . '\\hide_admin_bar' );
 
 function wpse_allowedtags() {
     // Add custom tags to this string
