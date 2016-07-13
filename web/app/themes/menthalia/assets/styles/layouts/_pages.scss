@@ -20,7 +20,7 @@
         	width: $areachild-text-width;
             // calc fallback
             max-width: 100%;            
-            max-width: calc(100% + $areachild-text-width - $homepage-container-width);        	
+            max-width: calc(100% + #{$areachild-text-width - $homepage-container-width });        	
             float: left;            
             color: #fff;
             text-decoration: none;
@@ -42,6 +42,7 @@
                 font-size: 3.75rem;
                 padding-top: 2.25rem;
                 line-height: 0.8;
+                display:inline-block;
                 .subtitle {
                     font-size: 0.5em;
                     display: inline-block;
@@ -464,21 +465,39 @@ article.eventi{
 }
 body.post-type-archive-eventi{
 	.main{
-		
+		text-align: justify;
 		overflow: hidden;
 		max-width: 1280px;
 margin: 0 auto;
+@media ( max-width: 1050px){
+	text-align:center;	
+}
+
 	}
 		article.eventi{
 max-width: 635px;
 margin-bottom: 2rem;
-width: 50%;
-
+width: 49%;
 margin-right: -4px;
-min-width: 544px;
+//min-width: 544px;
+@media(max-width: 1050px){
+	width:100%;
+	.data{
+		background-color:RGBA(0, 0, 0, 0.3) ;
+		font-weight: 900;
+	}
+}
+@media(max-width: 600px){
+	.data{
+		background-color:RGBA(0, 0, 0, 0.3) ;
+		font-weight: 900;
+	}
+}
+@media(min-width: 1050px){
 	.entry-summary{
 		padding-left: 100px;
 	}
+}
 		.entry-content{
 		margin-left: 2rem;
 		font-size: 0.85rem;
@@ -492,8 +511,43 @@ min-width: 544px;
 body.single-eventi{
 	.main{
 		text-align: center;
+		padding:0;
+		padding-bottom:3%;
 	}
 	article.eventi{		
-		max-width: 900px;
+		max-width: 990px;
+		padding: 0 5% 2rem;
+		.wp-post-image{
+			width:100%;
+		}
+		.entry-image{
+			//width: 113.39%;
+			//margin-left: -6.6%;
+		}
+		.entry-title{ margin-top:.83em}
+		.entry-title,.entry-subtitle{text-align:center;}
+		.entry-programma{
+			font-size: 1.3rem;
+			text-align: center;
+			margin: 2rem 0 4rem;			
+			a{ 
+				text-decoration: none;
+				font-weight: 600;
+				&:before{ margin-right: 7px;}
+			}
+		}
+		.gform_wrapper h3.gform_title{
+			border-bottom: 1px solid #E5E5E5;
+			border-top: 1px solid #E5E5E5;
+			padding: 1rem 0px;
+		}
+		.gfield_contains_required .ginput_container_checkbox{
+			width: calc(100% - 23px);
+			display: inline-block;
+			margin-top: 0px;
+			line-height: 20.8px;
+			vertical-align: top;
+			margin-left: 10px;
+		}
 	}
 }

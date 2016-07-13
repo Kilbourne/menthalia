@@ -13,7 +13,7 @@
 .site-claim {
 	// calc fallback
 	width: 85%;
-    width: calc( 100% - $menu-button-width);
+    width: calc( 100% - #{$menu-button-width});
 	margin: 0px;
 	@include vertical-centered();
     text-align: center;

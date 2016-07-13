@@ -6,7 +6,7 @@
 <section id="parallax">
 <div class="background up"></div>
   <div class="background down"></div>
-  <img class="fiammifero  skrollable "  data-0="top:54%;"  data-31="top:54%;" src="http://192.168.1.18/menthalia/app/uploads/2016/07/3.png" alt="">
+  <img class="fiammifero  skrollable "  data-0="top:54%;"  data-1p="top:54%;" src="http://192.168.1.18/menthalia/app/uploads/2016/07/3.png" alt="">
 </section>
  
  <?php 

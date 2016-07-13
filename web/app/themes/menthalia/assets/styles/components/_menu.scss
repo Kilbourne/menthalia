@@ -33,6 +33,7 @@
     z-index: 888;
     top: $menu-fullheight;
     padding-top: 0px !important;
+    width:315px;
     .responsive_menu_pro_menu li {
         height: 82px;
         &:hover {
@@ -50,8 +51,11 @@
     }
 }
 body.admin-bar{
-    #responsive_menu_pro {
+    #responsive_menu_pro,#responsive_menu_pro_button {
             margin-top: 32px;
+            @media screen and ( max-width: 782px ) {
+                margin-top: 46px;
+            }
     }
 }
 #responsive_menu_pro_title {

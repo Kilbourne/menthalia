@@ -9,7 +9,9 @@ body.admin-bar{
     * html body { margin-top: 46px !important; }
   }
 }
-
+html #wpadminbar{
+  position:fixed;
+}
 // Media alignment
 .alignnone {
   margin-left: 0;

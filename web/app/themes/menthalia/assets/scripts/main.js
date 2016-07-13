@@ -19,6 +19,8 @@
     'common': {
       init: function() {
         var s = skrollr.init();
+        $('.site-claim').flowtype({minFont : 19,maxFont: 32});
+        $('.aree-menthalia .area-title').flowtype({minFont : 40,maxFont: 70,maximum : 1280,fontRatio : 10});
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -36,6 +38,7 @@
     // About us page, note the change from about-us to about_us.
     'page_template_service': {
       init: function() {
+
 $(window).scroll(function() {
             var y = $(window).scrollTop(),
             y2=(Number(jQuery('#parallax').css('paddingBottom').split('px')[0])*48)/100;
