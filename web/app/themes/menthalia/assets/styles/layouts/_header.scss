@@ -1,7 +1,7 @@
 .banner {
 	position: fixed;
 	width: 100%;
-    height: $menu-fullheight;    
+    height: $menu-fullheight;
     background-color: #fff;
     z-index: $header-zindex;
     box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.48);
@@ -11,9 +11,8 @@
 }
 
 .site-claim {
-	// calc fallback
-	width: 85%;
-    width: calc( 100% - #{$menu-button-width});
+    width: 100%;
+    padding-right:  $menu-button-width;
 	margin: 0px;
 	@include vertical-centered();
     text-align: center;
