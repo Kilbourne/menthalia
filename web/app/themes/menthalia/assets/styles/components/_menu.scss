@@ -32,8 +32,9 @@
     width: $menu-width;
     height: 100vh;
     padding: 0px;
-    z-index: $header-zindex;
+    z-index: $header-zindex;    
     box-sizing: border-box !important;
+    padding-top: 148px;
     overflow-y: hidden;
     &.responsive_menu_pro_opened {
         position: absolute;
@@ -82,17 +83,10 @@ body.admin-bar {
     #responsive_menu_pro_button {
         margin-top: 0 !important;
     }
-    #responsive_menu_pro {
-        margin-top: -32px !important;
+    #responsive_menu_pro {        
+        height: calc( 100vh - 32px );
         @media screen and ( max-width: 782px) {
-            margin-top: -48px !important;
-        }
-    }
-    #responsive_menu_pro_title,
-    #menu-container {
-        margin-top: 32px;
-        @media screen and ( max-width: 782px) {
-            margin-top: 48px !important;
+            height: calc( 100vh - 48px );
         }
     }
 }
