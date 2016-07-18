@@ -369,6 +369,8 @@ border-radius: .25rem;
 	>a>.wp-post-image{
 		max-width: 100%;
 		height:auto;
+		margin: 0 auto;
+		display: block;
 	}
 .entry-summary{
 	padding: 1.25rem;
@@ -463,7 +465,12 @@ article.eventi{
 		strong{color: rgb(85, 85, 116);}
 	}
 }
-body.post-type-archive-eventi{
+body.post-type-archive-eventi,body.eventi-passati,body.single-eventi{
+	.main{
+		padding: 1% 2.5%;
+	}
+}	
+body.post-type-archive-eventi,body.eventi-passati{
 	.main{
 		text-align: justify;
 		overflow: hidden;
@@ -479,6 +486,7 @@ max-width: 635px;
 margin-bottom: 2rem;
 width: 49%;
 margin-right: -4px;
+.entry-title{ font-size:1.5rem;}
 //min-width: 544px;
 @media(max-width: 1050px){
 	width:100%;
@@ -550,4 +558,26 @@ body.single-eventi{
 			margin-left: 10px;
 		}
 	}
+}
+.alert-warning{margin-top: 1.5rem;}
+.archivio-eventi{margin-bottom: 1.5rem;}
+.alert-warning,.archivio-eventi{
+	font-size: 1.5rem;
+	>a{text-decoration: none;}
+}
+
+.sedi-container{
+	background-color: rgb(109, 74, 77);
+	color: #D4B77E;
+}
+.sedi-wrapper{
+	max-width: 990px;
+	margin: 0px auto;
+	padding: 2rem 5%;
+}
+.contatti-sedi{ text-align: center; }
+.contatti-sede{
+	display: inline-block;
+	vertical-align: top;
+	width: 49%;
 }

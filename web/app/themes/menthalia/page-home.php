@@ -1,5 +1,18 @@
 <?php 
+  $aaa=get_posts(['post_type'=>'eventi','posts_per_page'=>-1]);
+  foreach ($aaa as $key => $post) {
+    
+    update_field( 'background_color', '#662D91', $post->ID );
+    update_field( 'title_color', '#fff', $post->ID );
+	update_field( 'title_background_color', '#662D91', $post->ID );
+	update_field( 'subtitle_background_color', '#fff', $post->ID );
+	update_field( 'subtitle_color', '#662D91', $post->ID );
+	update_field( 'article_background_color', '#fff', $post->ID );
 
+
+
+
+  }
 $aree_menthalia=get_posts(
 	array(
 		'posts_per_page'   => 99,

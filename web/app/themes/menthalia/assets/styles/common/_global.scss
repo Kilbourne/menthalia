@@ -9,12 +9,7 @@ section{
 	overflow:hidden;
 	z-index: 3;
 }
-main {
-    margin-top: 158px;
-    padding: 1% 2.5%;
-}
-body.home.page,body.page-template-service{
-	main{
-		padding:0;
-	}
+main{
+	margin-top: 158px;
+	padding:0;
 }

@@ -80,6 +80,7 @@
     "wpackagist-plugin/kint-debugger": "1.0.0",
     "wpackagist-plugin/log-deprecated-notices": "0.3",
     "wpackagist-plugin/theme-check": "20160523.1",
+    "firephp/firephp-core":"dev-master",
     "szepeviktor/auto-login":"dev-master"  
   },
   "extra": {

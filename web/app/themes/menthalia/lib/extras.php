@@ -9,7 +9,9 @@ use Roots\Sage\Setup;
  */
 function body_class($classes) {
   // Add page slug if it doesn't exist
-  if (is_single() || is_page() && !is_front_page()) {
+  if(is_page('eventi-passati')){
+    $classes[] = 'eventi-passati';
+  }elseif (is_single() || is_page() && !is_front_page()) {
     if (!in_array(basename(get_permalink()), $classes)) {
       $classes[] = basename(get_permalink());
     }
@@ -40,10 +42,22 @@ add_action('admin_bar_init', __NAMESPACE__ . '\\remove_admin_css');
 add_action('pre_get_posts', __NAMESPACE__ . '\\custom_menthalia_loop');
 
 function custom_menthalia_loop($query) {
-    if (isset($query->query['post_type']) && $query->query['post_type'] === 'eventi') {
+  
+    if (!is_admin() && isset($query->query['post_type']) && $query->query['post_type'] === 'eventi' && is_post_type_archive() ) {
       $today = date('Ymd');
         
         $query->set('meta_key','data');
+        $query->set('meta_value',$today);
+        $query->set('meta_compare','>=');
+        $query->set('order','data');
+        $query->set('order','DESC');
+        $query->set('posts_per_page',-1);
+    }elseif($query->get_queried_object() && $query->is_page('eventi-passati')){
+         
+    $today = date('Ymd');
+    $query->set('pagename',false); 
+      $query->set('post_type','eventi');
+              $query->set('meta_key','data');
         $query->set('meta_value',$today);
         $query->set('meta_compare','<=');
         $query->set('order','data');
@@ -67,7 +81,7 @@ function wpse_allowedtags() {
 
 
 
-    function wpse_custom_wp_trim_excerpt($wpse_excerpt) {
+    function wpse_custom_wp_trim_excerpt($wpse_excerpt,$more=true) {
     $raw_excerpt = $wpse_excerpt;
         if ( '' == $wpse_excerpt ) {
 
@@ -105,20 +119,20 @@ function wpse_allowedtags() {
             $wpse_excerpt = trim(force_balance_tags($excerptOutput));
 
                 $excerpt_end = ' <a href="'. esc_url( get_permalink() ) . '">' . '&nbsp;&raquo;&nbsp;' . sprintf(__( 'Read more about: %s &nbsp;&raquo;', 'wpse' ), get_the_title()) . '</a>'; 
-                $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end); 
-
-                //$pos = strrpos($wpse_excerpt, '</');
-                //if ($pos !== false)
+                //$excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end); 
+                if($more){
+                $pos = strrpos($wpse_excerpt, '</');
+                if ($pos !== false)
                 // Inside last HTML tag
-                //$wpse_excerpt = substr_replace($wpse_excerpt, $excerpt_end, $pos, 0); /* Add read more next to last word */
-                //else
+                $wpse_excerpt = substr_replace($wpse_excerpt, excerpt_more(), $pos, 0); /* Add read more next to last word */
+                else
                 // After the content
-                //$wpse_excerpt .= $excerpt_more; /*Add read more in new paragraph */
-
+                $wpse_excerpt .= excerpt_more(); /*Add read more in new paragraph */
+                }
             return $wpse_excerpt;   
 
         }
-        return apply_filters( __NAMESPACE__ . '\\wpse_custom_wp_trim_excerpt', $wpse_excerpt, $raw_excerpt);
+        return $wpse_excerpt;
     }
 
 
@@ -131,9 +145,13 @@ function wpse_custom_excerpts($limit,$id,$source=null) {
     $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
     $excerpt = strip_shortcodes($excerpt);
     $excerpt = strip_tags($excerpt);
+    
+    $limit   = $limit?$limit:strlen($excerpt);
     $excerpt = substr($excerpt, 0, $limit);
     $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
-    $excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
-    $excerpt = $excerpt.'... <a href="'.get_permalink($id).'">more</a>';
+    //$excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
+    $excerpt = $excerpt.excerpt_more();
     return $excerpt;
 }
+
+

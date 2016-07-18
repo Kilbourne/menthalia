@@ -63,6 +63,16 @@ $(window).scroll(function() {
         });
       }
     },
+    'post_type_archive_eventi':{
+      init:function(){
+        $('.entry-title').flowtype({maxFont : 24,fontRatio:25,minimum:500,maximum:1000});
+      }
+    },
+    'eventi_passati':{
+      init:function(){
+        $('.entry-title').flowtype({maxFont : 24,fontRatio:25,minimum:500,maximum:1000});
+      }
+    },
     'blog':{
       init:function(){
         $.fn.almComplete = function(alm){
