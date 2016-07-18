@@ -38,13 +38,14 @@
     // About us page, note the change from about-us to about_us.
     'page_template_service': {
       init: function() {
-
-$(window).scroll(function() {
-            var y = $(window).scrollTop(),
-            y2=(Number(jQuery('#parallax').css('paddingBottom').split('px')[0])*48)/100;
-            
-            $(".fiammifero.skrollable-after").css('top', y+y2);
-});
+                var imageRatio=0.6484,
+        inverseRatio=1.5422,
+        menuMinHeight=118;
+                  var parallax=$('#parallax'),images,
+          parallaxImages=parallax.add(parallax.children('.background'));
+          parallaxResize();
+        $(window).resize(function() { parallaxResize(); })
+$(window).scroll(moveFiammifero);
         $('.service>a').click(function(event) {
             event.preventDefault();
 
@@ -59,8 +60,20 @@ $(window).scroll(function() {
                   $(this).addClass('active');
               });
             });
-            
+
         });
+function moveFiammifero() {
+            var y = $(window).scrollTop(),
+            y2=(parallax.height()*48)/100;
+
+            $(".fiammifero.skrollable-after").css('top', y+y2);
+}
+        function parallaxResize(){
+          var vpW=$( window ).width()*imageRatio,H=$( window ).height()-menuMinHeight;
+          parallaxImages.width(H*inverseRatio);
+          parallax.height((vpW>H?H:vpW));
+          moveFiammifero();
+        }
       }
     },
     'post_type_archive_eventi':{
@@ -76,7 +89,7 @@ $(window).scroll(function() {
     'blog':{
       init:function(){
         $.fn.almComplete = function(alm){
-          
+
           alm.disable_ajax &&
           $('.posts-navigation').show();
         };

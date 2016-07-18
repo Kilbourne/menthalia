@@ -19,9 +19,9 @@
         >.area-child {
         	width: $areachild-text-width;
             // calc fallback
-            max-width: 100%;            
-            max-width: calc(100% + #{$areachild-text-width - $homepage-container-width });        	
-            float: left;            
+            max-width: 100%;
+            max-width: calc(100% + #{$areachild-text-width - $homepage-container-width });
+            float: left;
             color: #fff;
             text-decoration: none;
 			font-weight: 300;
@@ -62,7 +62,7 @@
 }
 
 #team {
-    background-color: $grey;    
+    background-color: $grey;
     .section-title {
         background-color: #5F6598;
     }
@@ -104,14 +104,14 @@
                     p {
                         margin: 0px 0px 0.5rem;
                         color: $brand-primary;
-                    }                
+                    }
             }
         }
         &:hover {
             .team-member-content {
                 display: block;
                 @include absolute(0 0 0 0);
-                background-color: rgb(255, 255, 255);                
+                background-color: rgb(255, 255, 255);
                 border-radius: 50%;
                 text-align: center;
             }
@@ -240,23 +240,21 @@ overflow: hidden;
 }
 
 #parallax {
-    position:relative;
-    padding-bottom: 64.84%;    
+position: relative;
+margin: 0 auto;
+max-width: 100%;
     .background{
-    	width: 100%;
-    	margin: 0 auto;
-		padding-bottom: 64.84%;
-		position:fixed;
+    	position: fixed;
+      height: auto;
+      max-width: 100%;
 		//background-attachment: fixed;
-		background-size: 100% auto;
-		//background-position: center 158px;		
+		//background-position: center 158px;
     }
     .up{
-    	background-image: url('http://192.168.1.18/menthalia/app/uploads/2016/07/1-1.png');
     	//position:relative;
     }
     .down{
-    	background-image: url('http://192.168.1.18/menthalia/app/uploads/2016/07/2.png');
+
     	//position:absolute;
     	//top:0;
     	z-index: 2;
@@ -377,7 +375,7 @@ border-radius: .25rem;
 	>p{
 		margin:0;
 		line-height: 1.6;
-		.read-more{ 
+		.read-more{
 			font-size:0.85rem;
 			text-decoration: none;
 			color: #662D91;
@@ -398,7 +396,7 @@ border-radius: .25rem;
 .posts-navigation{
 	background-color: #662D91;
 	display:none;
-	.nav-links{ 
+	.nav-links{
 		padding: 2rem 3%;
 		max-width: 1280px;
 		margin: 0 auto;
@@ -425,9 +423,9 @@ border-radius: .25rem;
 
 }
 article.eventi{
-	
+
 	position: relative;
-	
+
 	display: inline-block;
 	vertical-align: top;
 	text-align:left;
@@ -461,7 +459,7 @@ article.eventi{
 		}
 	}
 	.entry-content{
-		display: inline-block;		
+		display: inline-block;
 		strong{color: rgb(85, 85, 116);}
 	}
 }
@@ -469,7 +467,7 @@ body.post-type-archive-eventi,body.eventi-passati,body.single-eventi{
 	.main{
 		padding: 1% 2.5%;
 	}
-}	
+}
 body.post-type-archive-eventi,body.eventi-passati{
 	.main{
 		text-align: justify;
@@ -477,7 +475,7 @@ body.post-type-archive-eventi,body.eventi-passati{
 		max-width: 1280px;
 margin: 0 auto;
 @media ( max-width: 1050px){
-	text-align:center;	
+	text-align:center;
 }
 
 	}
@@ -522,7 +520,7 @@ body.single-eventi{
 		padding:0;
 		padding-bottom:3%;
 	}
-	article.eventi{		
+	article.eventi{
 		max-width: 990px;
 		padding: 0 5% 2rem;
 		.wp-post-image{
@@ -537,10 +535,11 @@ body.single-eventi{
 		.entry-programma{
 			font-size: 1.3rem;
 			text-align: center;
-			margin: 2rem 0 4rem;			
-			a{ 
+			margin: 2rem 0 4rem;
+			a{
 				text-decoration: none;
 				font-weight: 600;
+        padding: 10px;
 				&:before{ margin-right: 7px;}
 			}
 		}
