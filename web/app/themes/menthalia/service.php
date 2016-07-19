@@ -9,7 +9,7 @@
 <img class="background down" src="http://192.168.1.18/menthalia/app/uploads/2016/07/2.png" alt="">
 
 
-  <img class="fiammifero  skrollable "  data-0="top:54%;"  data-1p="top:54%;" src="http://192.168.1.18/menthalia/app/uploads/2016/07/3.png" alt="">
+  <img class="fiammifero " src="http://192.168.1.18/menthalia/app/uploads/2016/07/3.png" alt="">
 </section>
 
  <?php
@@ -46,6 +46,7 @@ echo '<section id="services">'.$display_services['list'].$display_services['desc
 	array(
 		'posts_per_page'   => 99,
 	'post_type'        => 'clienti',
+	'order'=>'ASC'
 	)
 );
 $active_key=0;
@@ -55,12 +56,17 @@ $display_clienti['list']='';
 if ($clienti){
 $display_clienti['list'].='<div class="clienti-list-wrap"> <ul class="clienti-list list" > ';
 foreach ($clienti as $key => $cliente){
+	if(get_field('area',$cliente->ID) && get_field('area',$cliente->ID)[0]===get_the_ID()){
 	$id=$cliente->ID;
 	$active=$active_key===$key?'active':'';
 	$image=get_the_post_thumbnail( $id )?get_the_post_thumbnail( $id ):'<div class="placeholder"></div>';
-$display_clienti['list'].='<li class="cliente '.$active.'"><a href="'.get_permalink( $id ).'">'.$image.'</a></li>';
+	$link=get_field('link_cliente',$id);
+$display_clienti['list'].='<li class="cliente '.$active.'">';
+if($link)$display_clienti['list'].='<a href="'.$link.'">';
+$display_clienti['list'].=$image;
+if($link)$display_clienti['list'].='</a></li>';
 
-
+}
 }
 
 $display_clienti['list'].='</ul></div>';

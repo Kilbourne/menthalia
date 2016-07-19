@@ -4,7 +4,7 @@
     height: $menu-fullheight;
     padding: 0px;
     background-color: $brand-primary;
-    z-index: $menu-zindex;
+    z-index: $menu-zindex;    
     &:hover {
         background-color: $menu-hover-color;
     }
@@ -32,7 +32,8 @@
     width: $menu-width;
     height: 100vh;
     padding: 0px;
-    z-index: $header-zindex;    
+    z-index: $header-zindex;   
+    max-width: 100% !imprtant; 
     //box-sizing: border-box !important;
     padding-top: 148px;
     overflow-y: hidden;
@@ -42,6 +43,7 @@
     #responsive_menu_pro_title {
         width: $menu-width !important;
         height: $menu-fullheight;
+        max-width: 100%;
         @include absolute(0 n n 0);
         right: -$menu-width;
         z-index: $menu-zindex;

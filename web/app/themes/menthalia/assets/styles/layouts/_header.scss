@@ -15,7 +15,7 @@
     width: 100%;
     padding-right:  $menu-button-width;
 	margin: 0px;
-	@include vertical-centered();
+	@include vertical-centered(absolute);
     text-align: center;
     font-weight: 300;
     >p {

@@ -66,9 +66,9 @@ function custom_menthalia_loop($query) {
     }
 } 
 function hide_admin_bar() {
-  if (is_page_template('service.php')) {
-    return false;
-  }else{
+  if(is_user_logged_in() && !is_page_template('service.php') )
+  {
+  
     return true;
   }
 }

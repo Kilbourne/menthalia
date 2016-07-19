@@ -64,10 +64,14 @@ $(window).scroll(moveFiammifero);
         });
 function moveFiammifero() {
             var y = $(window).scrollTop(),
-            y2=(parallax.height()*48)/100;
-
-            $(".fiammifero.skrollable-after").css('top', y+y2);
-}
+            fiammifero=$(".fiammifero"),
+            h=fiammifero.height(),
+            y2=(parallax.height()*54)/100;
+            if(y<h*0.27){
+             fiammifero.css('top', y2);  
+            }else{
+            fiammifero.css('top', y+y2-(h/3.6));
+}           }
         function parallaxResize(){
           var vpW=$( window ).width()*imageRatio,H=$( window ).height()-menuMinHeight;
           parallaxImages.width(H*inverseRatio);
