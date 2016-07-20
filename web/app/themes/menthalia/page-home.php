@@ -3,6 +3,7 @@ $aree_menthalia=get_posts(
 	array(
 		'posts_per_page'   => 99,
 	'post_type'        => 'menthalia-area',
+	'order'=>'ASC'
 	)
 	);
 $team=get_posts(

@@ -38,13 +38,15 @@
     // About us page, note the change from about-us to about_us.
     'page_template_service': {
       init: function() {
-                var imageRatio=0.6484,
-        inverseRatio=1.5422,
+                var imageRatio=0.46875,
+        inverseRatio=1.6,
         menuMinHeight=118;
                   var parallax=$('#parallax'),images,
           parallaxImages=parallax.add(parallax.children('.background'));
-          parallaxResize();
-        $(window).resize(function() { parallaxResize(); })
+          //parallaxResize();
+        $(window).resize(function() { //parallaxResize(); 
+          moveFiammifero();
+        })
 $(window).scroll(moveFiammifero);
         $('.service>a').click(function(event) {
             event.preventDefault();
@@ -66,16 +68,18 @@ function moveFiammifero() {
             var y = $(window).scrollTop(),
             fiammifero=$(".fiammifero"),
             h=fiammifero.height(),
-            y2=(parallax.height()*54)/100;
+            y2=(parallax.height()*35)/100;
             if(y<h*0.27){
              fiammifero.css('top', y2);  
             }else{
-            fiammifero.css('top', y+y2-(h/3.6));
-}           }
+             fiammifero.css('top', y+y2-(h/4));
+            }           
+}
         function parallaxResize(){
           var vpW=$( window ).width()*imageRatio,H=$( window ).height()-menuMinHeight;
-          parallaxImages.width(H*inverseRatio);
-          parallax.height((vpW>H?H:vpW));
+          var val=vpW>H?H:vpW;
+          parallax.height(val);
+          parallaxImages.width(val*inverseRatio);          
           moveFiammifero();
         }
       }

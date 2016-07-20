@@ -1,7 +1,7 @@
 <?php while (have_posts()) : the_post(); 
 
-if(get_the_post_thumbnail()) $image=get_the_post_thumbnail();
-if(get_field('immagine_in_evidenza')){
+if(get_the_post_thumbnail()) {$image=get_the_post_thumbnail();}
+elseif(get_field('immagine_in_evidenza')){
   if(is_numeric(get_field('immagine_in_evidenza'))){
     $image=wp_get_attachment_image(get_field('immagine_in_evidenza'),'full');
   }else{    

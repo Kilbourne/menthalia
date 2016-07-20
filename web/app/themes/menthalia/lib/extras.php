@@ -43,16 +43,7 @@ add_action('pre_get_posts', __NAMESPACE__ . '\\custom_menthalia_loop');
 
 function custom_menthalia_loop($query) {
   
-    if (!is_admin() && isset($query->query['post_type']) && $query->query['post_type'] === 'eventi' && is_post_type_archive() ) {
-      $today = date('Ymd');
-        
-        $query->set('meta_key','data');
-        $query->set('meta_value',$today);
-        $query->set('meta_compare','>=');
-        $query->set('order','data');
-        $query->set('order','DESC');
-        $query->set('posts_per_page',-1);
-    }elseif($query->get_queried_object() && $query->is_page('eventi-passati')){
+if($query->get_queried_object() && $query->is_page('eventi-passati')){
          
     $today = date('Ymd');
     $query->set('pagename',false); 

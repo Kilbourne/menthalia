@@ -22,13 +22,19 @@ foreach ($attachments as $key => $image) {
 $posts=get_posts(['post_type'=>'post','posts_per_page'=>-1] );
 foreach ($posts as $key => $post) {
 	$image=get_field('immagine_in_evidenza',$post->ID);
+	var_dump($image);
 	$index=array_search($image,$not_linked);
 	if($index !== FALSE )
 	array_splice($not_linked,$index , 1);
 }
 var_dump(count($not_linked));
 foreach ($not_linked as $key => $value) {
-	var_dump(get_permalink($value ),get_post($value)->post_date.'<br/>');
+	if ( false === wp_delete_attachment( $value) ) {
+		var_dump('Can\'t delete:'.get_permalink($value ),get_post($value)->post_date.'<br/>');
+	}else{
+		var_dump('Deleted:'.get_permalink($value ),get_post($value)->post_date.'<br/>');
+	}
 	
+
 }
  ?>
