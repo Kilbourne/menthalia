@@ -22,7 +22,7 @@
     "imagesloaded": "~4.1.0",
     "picturefill": "latest",
     "skrollr": "~0.6.30",
-    "parallax.js": "~1.4.2",
-    "Flowtype.js": "~1.1.0"
+    "Flowtype.js": "~1.1.0",
+    "magnific-popup": "~1.1.0"
   }
 }

@@ -2,10 +2,43 @@
 /**
  * Template Name: Service
  */
+use Roots\Sage\Extras;
+if(get_field('background_servizi')){
+	echo '<style>
+		#responsive_menu_pro .responsive_menu_pro_menu li.current_page_item > a{background-color:'.get_field('background_servizi').' !important;}
+	</style>';
+}
+if(get_field('video')){ 
+$filename=explode(substr(strrchr(get_field('video'),'.'),0),get_field('video'))[0];
+		?>
+<div class="video-cont" > 		
 
-if(get_field('immagine_area')){
+<video id="video" preload="auto" autoplay="true" >
+<?php if(Extras\get_attachment_id($filename.'.webm')){ ?> 		<source src="<?php echo $filename.'.webm'; ?>" type="video/webm"><?php } ?>
+<?php if(Extras\get_attachment_id($filename.'.mp4')){ ?> 
+<source src="<?php echo $filename.'.mp4'; ?>" type="video/mp4">	
+<?php } ?>
+<?php if(Extras\get_attachment_id($filename.'.ogv')){ ?> 	
+  
+        <source src="<?php echo $filename.'.ogv'; ?>" type="video/ogg">
+<?php } ?>
+      
+
+
+			This browser does not support video
+		</video>
+ <?php if(get_field('claim')){echo get_field('claim'); }echo wp_get_attachment_image( get_field('immagine_area'),'full');?>
+
+		<div id="video_pattern" style="<?php if(get_field('pattern')){ echo 'background-image:url('.wp_get_attachment_url( get_field("pattern"),"full").');' ;}?>
+"></div>
+		</div>
+	<?php }  
+  	elseif(get_field('immagine_area')){
 ?>
-	<section id="static-image" style="background-color: <?php echo get_field('background_color_immagine_area'); ?>"><?php echo wp_get_attachment_image( get_field('immagine_area'),'full');?></section> 
+	<section id="static-image" style="background-color: <?php
+	 echo get_field('background_color_immagine_area'); ?>">
+
+	 <?php if(get_field('claim')){echo get_field('claim'); }echo wp_get_attachment_image( get_field('immagine_area'),'full');?></section> 
 <?php
 }else{
 ?>
@@ -57,10 +90,14 @@ echo '<section id="services">'.$display_services['list'].$display_services['desc
 } ?>
 
  <?php
+ $orderby=is_page('medical-agency')?'title':'date';
+ $order=is_page('medical-agency')?'ASC':'DESC';
  $clienti=get_posts(
 	array(
 		'posts_per_page'   => 99,
-	'post_type'        => 'clienti'
+	'post_type'        => 'clienti',
+	'orderby'=>$orderby,
+	'order'=>$order
 	)
 );
 $active_key=0;
@@ -95,45 +132,46 @@ echo '<section id="customer-logos"><h2 class="section-title">'. __('clienti','sa
     if (is_page('ecm' ) ){
       $today = date('Ymd');
         global $wp_query;
-        $wp_query=new WP_Query(['meta_key'=>'data',
-        'meta_value'=>$today,
-        'meta_compare'=>'>=',
+        $wp_query=new WP_Query([
+        'post_type'=>'eventi',
         'order'=>'data',
         'order'=>'DESC',
-        'posts_per_page'=>-1]);?>
-        <section id="ecm-event-list">
+        'posts_per_page'=>3]);?>
+        <section id="ecm-event-list" class="archivio-eventi">
  <?php    
 if (!have_posts()) { ?>
   <div class="alert alert-warning">
     <?php _e('Non ci sono nuovi eventi in programma.', 'sage'); ?>
     </div>
 <?php } ?>
-    <div class="archivio-eventi">
-    <a href="<?php echo get_page_link(get_page_by_path('eventi-passati')->ID); ?>"><?php _e('Consulta l\'archivio degli eventi passati.', 'sage'); ?></a>
-    </div>
+    
+    <h3 class="ecm-event-list-title"><?php _e('I nostri Eventi','sage') ?></h3>
 
   <?php
-$old_year=null;
-$old_month=null;
 while (have_posts()) : the_post();
 $date=DateTime::createFromFormat('Ymd',get_field('data',$post->ID));
-$year=$date->format('Y');
-      $month=$date->format('m');  if($year!==$old_year || $month!==$old_month){
   	?>
-  	<time class="mese-ecm"><?php     echo date_i18n('F',strtotime(get_field('data',$post->ID))).' '.$year; ?></time>
-  	<?php
-	  	$old_year=$year;
-	  	$old_month=$month;
-  }
-
-  	?>
+  	
+  	
   <?php
 
+	
 
-  get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
+$date = strtotime(get_field('data',$post->ID));
+ ?>
+<article <?php post_class(); ?>>  
+  
+  	<div class="entry-image <?php if(!get_the_post_thumbnail()) echo 'demo';?>"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div> 
+  	<div class="entry-summary">
+  	<date class="data" ><?php 	echo date('d / m',$date);  ?></date>
+  	<a class="entry-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+    		 
+  </div>
+</article> 
 <?php endwhile; ?>
-
-<?php the_posts_navigation();   
+<a class="archivio-link" href="<?php echo get_post_type_archive_link( 'eventi' ); ?>"><?php _e('Consulta l\'archivio degli eventi passati.', 'sage'); ?></a>
+    
+<?php 	  
     }
  ?>
 </section>

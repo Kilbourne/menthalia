@@ -1,0 +1,277 @@
+0000.000 (0) Opened log file at time: Fri, 22 Jul 2016 15:44:46 +0000 on http://192.168.1.18/menthalia/wp
+0000.004 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.11.21.22 WP: 4.5.3 PHP: 5.6.19 (Windows NT WEB 6.2 build 9200 (Windows 8 Professional Edition) i586) MySQL: 5.5.5 Server: Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.19 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 36.3M | 37.3M) multisite: N mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.007 (0) Free space on disk containing Updraft's temporary directory: 180448.5 Mb
+0000.012 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.031 (0) Requesting semaphore lock (fd)
+0000.049 (0) Set semaphore last lock (fd) time to 2016-07-22 15:44:46
+0000.051 (0) Semaphore lock (fd) complete
+0000.061 (0) Backup run: resumption=0, nonce=d750a93ddb8a, begun at=1469202286 (0s ago), job type=backup
+0000.066 (0) Scheduling a resumption (1) after 300 seconds (1469202586) in case this run gets aborted
+0000.081 (0) Checking if we have a zip executable available
+0000.093 (0) Creation of backups of directories: beginning
+0000.100 (0) No backup of plugins: excluded by user's options
+0000.102 (0) No backup of themes: excluded by user's options
+0000.107 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone
+0000.109 (0) Looking for candidates to back up in: C:\server\htdocs\menthalia/web/app/uploads
+0000.112 (0) finding files: .gitkeep: adding to list (1)
+0000.115 (0) finding files: 2011: adding to list (2)
+0000.124 (0) finding files: 2012: adding to list (3)
+0000.126 (0) finding files: 2013: adding to list (4)
+0000.129 (0) finding files: 2014: adding to list (5)
+0000.131 (0) finding files: 2015: adding to list (6)
+0000.134 (0) finding files: 2016: adding to list (7)
+0000.136 (0) finding files: gravity_forms: adding to list (8)
+0000.138 (0) finding files: wp-migrate-db: adding to list (9)
+0000.141 (0) Beginning creation of dump of uploads (split every: 500 Mb)
+0002.889 (0) Total entities for the zip file: 65 directories, 7198 files (0 skipped as non-modified), 950.7 Mb
+0002.894 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 Mb, 1 (1) files added so far); re-opening (prior size: 0 Kb)
+0002.942 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 100 files added (on-disk size: 7.3 Kb)
+0003.003 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 200 files added (on-disk size: 7.3 Kb)
+0003.064 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 300 files added (on-disk size: 7.3 Kb)
+0003.124 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 400 files added (on-disk size: 7.3 Kb)
+0003.138 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 Mb added on this batch (25.3 Mb, 7198 files batched, 416 (417) added so far); re-opening (prior size: 7.3 Kb)
+0004.141 (0) A useful amount of data was added after this amount of zip processing: 1.8 s (normalised: 1.8 s, rate: 14090.9 Kb/s)
+0004.146 (0) Performance is good - will increase the amount of data we attempt to batch (time=1.8354580402374, normalised_time=1.8167708268829, max_time=-1, data points known=0, old_max_bytes=26214400, new_max_bytes=86574705)
+0004.201 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 500 files added (on-disk size: 25218.2 Kb)
+0004.271 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 600 files added (on-disk size: 25218.2 Kb)
+0004.344 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 700 files added (on-disk size: 25218.2 Kb)
+0004.415 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 800 files added (on-disk size: 25218.2 Kb)
+0004.487 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 900 files added (on-disk size: 25218.2 Kb)
+0004.502 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (65.5 Mb, 7198 files batched, 501 (918) added so far); re-opening (prior size: 25218.2 Kb)
+0007.372 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 1000 files added (on-disk size: 83654.8 Kb)
+0007.441 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 1100 files added (on-disk size: 83654.8 Kb)
+0007.503 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 1200 files added (on-disk size: 83654.8 Kb)
+0007.567 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 1300 files added (on-disk size: 83654.8 Kb)
+0007.632 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 1400 files added (on-disk size: 83654.8 Kb)
+0007.651 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 82.6 Mb added on this batch (84 Mb, 7198 files batched, 497 (1415) added so far); re-opening (prior size: 83654.8 Kb)
+0011.445 (0) A useful amount of data was added after this amount of zip processing: 4.1 s (normalised: 4.1 s, rate: 20766.6 Kb/s)
+0011.450 (0) Performance is good - will increase the amount of data we attempt to batch (time=4.1395781040192, normalised_time=4.0712317767107, max_time=-1, data points known=0, old_max_bytes=86574705, new_max_bytes=127589942)
+0011.508 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 1500 files added (on-disk size: 156155 Kb)
+0011.576 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 1600 files added (on-disk size: 156155 Kb)
+0011.648 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 1700 files added (on-disk size: 156155 Kb)
+0011.720 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 1800 files added (on-disk size: 156155 Kb)
+0011.793 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 1900 files added (on-disk size: 156155 Kb)
+0011.808 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (97.6 Mb, 7198 files batched, 501 (1916) added so far); re-opening (prior size: 156155 Kb)
+0016.316 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 2000 files added (on-disk size: 247866.1 Kb)
+0016.386 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 2100 files added (on-disk size: 247866.1 Kb)
+0016.454 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 2200 files added (on-disk size: 247866.1 Kb)
+0016.524 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 2300 files added (on-disk size: 247866.1 Kb)
+0016.597 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 2400 files added (on-disk size: 247866.1 Kb)
+0016.618 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (40.2 Mb, 7198 files batched, 501 (2417) added so far); re-opening (prior size: 247866.1 Kb)
+0018.891 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 2500 files added (on-disk size: 283377.5 Kb)
+0019.004 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 2600 files added (on-disk size: 283377.5 Kb)
+0019.075 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 2700 files added (on-disk size: 283377.5 Kb)
+0019.150 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 2800 files added (on-disk size: 283377.5 Kb)
+0019.233 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 2900 files added (on-disk size: 283377.5 Kb)
+0019.250 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (32.3 Mb, 7198 files batched, 501 (2918) added so far); re-opening (prior size: 283377.5 Kb)
+0021.883 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 3000 files added (on-disk size: 309193.7 Kb)
+0021.955 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 3100 files added (on-disk size: 309193.7 Kb)
+0022.038 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 3200 files added (on-disk size: 309193.7 Kb)
+0022.121 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 3300 files added (on-disk size: 309193.7 Kb)
+0022.199 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 3400 files added (on-disk size: 309193.7 Kb)
+0022.216 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (52.5 Mb, 7198 files batched, 501 (3419) added so far); re-opening (prior size: 309193.7 Kb)
+0024.975 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 3500 files added (on-disk size: 360218 Kb)
+0025.054 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 3600 files added (on-disk size: 360218 Kb)
+0025.128 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 3700 files added (on-disk size: 360218 Kb)
+0025.211 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 3800 files added (on-disk size: 360218 Kb)
+0025.292 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 3900 files added (on-disk size: 360218 Kb)
+0025.311 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (27.1 Mb, 7198 files batched, 501 (3920) added so far); re-opening (prior size: 360218 Kb)
+0027.063 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 4000 files added (on-disk size: 387757.9 Kb)
+0027.269 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 4100 files added (on-disk size: 387757.9 Kb)
+0027.355 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 4200 files added (on-disk size: 387757.9 Kb)
+0027.448 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 4300 files added (on-disk size: 387757.9 Kb)
+0027.532 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 4400 files added (on-disk size: 387757.9 Kb)
+0027.553 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (34.5 Mb, 7198 files batched, 501 (4421) added so far); re-opening (prior size: 387757.9 Kb)
+0030.096 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 4500 files added (on-disk size: 422796.2 Kb)
+0030.177 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 4600 files added (on-disk size: 422796.2 Kb)
+0030.267 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 4700 files added (on-disk size: 422796.2 Kb)
+0030.347 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 4800 files added (on-disk size: 422796.2 Kb)
+0030.436 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 4900 files added (on-disk size: 422796.2 Kb)
+0030.464 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (39.6 Mb, 7198 files batched, 501 (4922) added so far); re-opening (prior size: 422796.2 Kb)
+0033.027 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 5000 files added (on-disk size: 461285.7 Kb)
+0033.128 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 5100 files added (on-disk size: 461285.7 Kb)
+0033.223 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 5200 files added (on-disk size: 461285.7 Kb)
+0033.310 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip.tmp: 5300 files added (on-disk size: 461285.7 Kb)
+0033.386 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): possibly approaching split limit (52 Mb, 472 (5394) files added so far); last ratio: 0.9484; re-opening (prior size: 461285.7 Kb)
+0036.379 (0) Zip size is at/near split limit (498 Mb / 500 Mb) - bumping index (from: 0)
+0037.817 (0) Created uploads zip (0) - 509931.1 Kb in 36.2 s (14072.6 Kb/s) (SHA1 checksum: 09e22035977615167fcf136917375ee98594112e)
+0037.824 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 5400 files added (on-disk size: 0 Kb)
+0037.855 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 5500 files added (on-disk size: 0 Kb)
+0037.894 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 5600 files added (on-disk size: 0 Kb)
+0037.931 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 121.7 Mb added on this batch (121.7 Mb, 7198 files batched, 294 (5688) added so far); re-opening (prior size: 0 Kb)
+0043.556 (0) A useful amount of data was added after this amount of zip processing: 7.3 s (normalised: 7.3 s, rate: 17184 Kb/s)
+0043.573 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 5700 files added (on-disk size: 118943.9 Kb)
+0043.630 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 5800 files added (on-disk size: 118943.9 Kb)
+0043.691 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 5900 files added (on-disk size: 118943.9 Kb)
+0043.749 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 6000 files added (on-disk size: 118943.9 Kb)
+0043.809 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 6100 files added (on-disk size: 118943.9 Kb)
+0043.864 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (72.4 Mb, 7198 files batched, 501 (6189) added so far); re-opening (prior size: 118943.9 Kb)
+0047.243 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 6200 files added (on-disk size: 183035.4 Kb)
+0047.301 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 6300 files added (on-disk size: 183035.4 Kb)
+0047.357 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 6400 files added (on-disk size: 183035.4 Kb)
+0047.416 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 6500 files added (on-disk size: 183035.4 Kb)
+0047.473 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 6600 files added (on-disk size: 183035.4 Kb)
+0047.539 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (104.8 Mb, 7198 files batched, 501 (6690) added so far); re-opening (prior size: 183035.4 Kb)
+0052.407 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 6700 files added (on-disk size: 271087 Kb)
+0052.462 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 6800 files added (on-disk size: 271087 Kb)
+0052.521 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 6900 files added (on-disk size: 271087 Kb)
+0052.581 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 7000 files added (on-disk size: 271087 Kb)
+0052.639 (0) Zip: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip.tmp: 7100 files added (on-disk size: 271087 Kb)
+0052.695 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (101.3 Mb, 7198 files batched, 501 (7191) added so far); re-opening (prior size: 271087 Kb)
+0059.270 (0) Created uploads zip (1) - 373281.6 Kb in 21.5 s (17401.9 Kb/s) (SHA1 checksum: bcbba7b97abc179249d3d2972e71bb858c0e2546)
+0059.277 (0) No backup of wpcore: excluded by user's options
+0059.279 (0) No backup of others: excluded by user's options
+0059.282 (0) No backup of more: excluded by user's options
+0059.292 (0) Saving backup status to database (elements: 3)
+0059.298 (0) Beginning creation of database dump (WordPress DB)
+0059.323 (0) Table wp_options: Total expected rows (approximate): 223
+0059.347 (0) Table wp_options: Total rows added: 222 in 0.02 seconds
+0059.356 (0) Table wp_options: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_options.table.gz - 27.3 Kb)
+0059.372 (0) Table wp_users: Total expected rows (approximate): 1
+0059.378 (0) Table wp_users: Total rows added: 1 in 0.00 seconds
+0059.381 (0) Table wp_users: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_users.table.gz - 0.6 Kb)
+0059.394 (0) Table wp_usermeta: Total expected rows (approximate): 27
+0059.400 (0) Table wp_usermeta: Total rows added: 27 in 0.00 seconds
+0059.405 (0) Table wp_usermeta: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_usermeta.table.gz - 1.8 Kb)
+0059.419 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0059.425 (0) Table wp_commentmeta: Total rows added: 0 in 0.00 seconds
+0059.430 (0) Table wp_commentmeta: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_commentmeta.table.gz - 0.4 Kb)
+0059.442 (0) Table wp_comments: Total expected rows (approximate): 0
+0059.449 (0) Table wp_comments: Total rows added: 0 in 0.00 seconds
+0059.461 (0) Table wp_comments: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_comments.table.gz - 0.5 Kb)
+0059.473 (0) Table wp_links: Total expected rows (approximate): 0
+0059.480 (0) Table wp_links: Total rows added: 0 in 0.00 seconds
+0059.484 (0) Table wp_links: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_links.table.gz - 0.4 Kb)
+0059.498 (0) Table wp_postmeta: Total expected rows (approximate): 6204
+0059.636 (0) Table wp_postmeta: Total rows added: 6212 in 0.14 seconds
+0059.640 (0) Table wp_postmeta: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_postmeta.table.gz - 60.5 Kb)
+0059.650 (0) Table wp_posts: Total expected rows (approximate): 1212
+0059.791 (0) Table wp_posts: Total rows added: 1153 in 0.14 seconds
+0059.794 (0) Table wp_posts: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_posts.table.gz - 190.5 Kb)
+0059.806 (0) Table wp_term_relationships: Total expected rows (approximate): 347
+0059.814 (0) Table wp_term_relationships: Total rows added: 347 in 0.01 seconds
+0059.818 (0) Table wp_term_relationships: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_term_relationships.table.gz - 1.2 Kb)
+0059.828 (0) Table wp_term_taxonomy: Total expected rows (approximate): 2
+0059.834 (0) Table wp_term_taxonomy: Total rows added: 2 in 0.00 seconds
+0059.838 (0) Table wp_term_taxonomy: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_term_taxonomy.table.gz - 0.4 Kb)
+0059.849 (0) Table wp_termmeta: Total expected rows (approximate): 0
+0059.854 (0) Table wp_termmeta: Total rows added: 0 in 0.00 seconds
+0059.857 (0) Table wp_termmeta: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_termmeta.table.gz - 0.4 Kb)
+0059.869 (0) Table wp_terms: Total expected rows (approximate): 113
+0059.876 (0) Table wp_terms: Total rows added: 113 in 0.01 seconds
+0059.880 (0) Table wp_terms: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_terms.table.gz - 1.9 Kb)
+0059.890 (0) Table wp_alm: Total expected rows (approximate): 1
+0059.896 (0) Table wp_alm: Total rows added: 1 in 0.00 seconds
+0059.899 (0) Table wp_alm: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_alm.table.gz - 0.5 Kb)
+0059.911 (0) Table wp_mediafromftp_log: Total expected rows (approximate): 0
+0059.917 (0) Table wp_mediafromftp_log: Total rows added: 0 in 0.00 seconds
+0059.920 (0) Table wp_mediafromftp_log: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_mediafromftp_log.table.gz - 0.4 Kb)
+0059.958 (0) Table wp_rg_form: Total expected rows (approximate): 2
+0059.989 (0) Table wp_rg_form: Total rows added: 2 in 0.00 seconds
+0059.993 (0) Table wp_rg_form: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_form.table.gz - 0.4 Kb)
+0060.017 (0) Table wp_rg_form_meta: Total expected rows (approximate): 2
+0060.024 (0) Table wp_rg_form_meta: Total rows added: 2 in 0.00 seconds
+0060.028 (0) Table wp_rg_form_meta: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_form_meta.table.gz - 2.3 Kb)
+0060.051 (0) Table wp_rg_form_view: Total expected rows (approximate): 3
+0060.058 (0) Table wp_rg_form_view: Total rows added: 3 in 0.00 seconds
+0060.061 (0) Table wp_rg_form_view: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_form_view.table.gz - 0.5 Kb)
+0060.075 (0) Table wp_rg_incomplete_submissions: Total expected rows (approximate): 0
+0060.081 (0) Table wp_rg_incomplete_submissions: Total rows added: 0 in 0.00 seconds
+0060.092 (0) Table wp_rg_incomplete_submissions: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_incomplete_submissions.table.gz - 0.4 Kb)
+0060.103 (0) Table wp_rg_lead: Total expected rows (approximate): 0
+0060.110 (0) Table wp_rg_lead: Total rows added: 0 in 0.00 seconds
+0060.114 (0) Table wp_rg_lead: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_lead.table.gz - 0.5 Kb)
+0060.127 (0) Table wp_rg_lead_detail: Total expected rows (approximate): 0
+0060.132 (0) Table wp_rg_lead_detail: Total rows added: 0 in 0.00 seconds
+0060.135 (0) Table wp_rg_lead_detail: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_lead_detail.table.gz - 0.4 Kb)
+0060.151 (0) Table wp_rg_lead_detail_long: Total expected rows (approximate): 0
+0060.157 (0) Table wp_rg_lead_detail_long: Total rows added: 0 in 0.00 seconds
+0060.166 (0) Table wp_rg_lead_detail_long: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_lead_detail_long.table.gz - 0.3 Kb)
+0060.185 (0) Table wp_rg_lead_meta: Total expected rows (approximate): 0
+0060.193 (0) Table wp_rg_lead_meta: Total rows added: 0 in 0.00 seconds
+0060.196 (0) Table wp_rg_lead_meta: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_lead_meta.table.gz - 0.4 Kb)
+0060.207 (0) Table wp_rg_lead_notes: Total expected rows (approximate): 0
+0060.212 (0) Table wp_rg_lead_notes: Total rows added: 0 in 0.00 seconds
+0060.217 (0) Table wp_rg_lead_notes: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_lead_notes.table.gz - 0.4 Kb)
+0060.227 (0) Table wp_wplnst_scans: Total expected rows (approximate): 2
+0060.232 (0) Table wp_wplnst_scans: Total rows added: 2 in 0.00 seconds
+0060.236 (0) Table wp_wplnst_scans: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_wplnst_scans.table.gz - 1.4 Kb)
+0060.252 (0) Table wp_wplnst_scans_objects: Total expected rows (approximate): 0
+0060.259 (0) Table wp_wplnst_scans_objects: Total rows added: 0 in 0.00 seconds
+0060.263 (0) Table wp_wplnst_scans_objects: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_wplnst_scans_objects.table.gz - 0.4 Kb)
+0060.273 (0) Table wp_wplnst_urls: Total expected rows (approximate): 487
+0060.322 (0) Table wp_wplnst_urls: Total rows added: 487 in 0.05 seconds
+0060.329 (0) Table wp_wplnst_urls: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_wplnst_urls.table.gz - 29.6 Kb)
+0060.347 (0) Table wp_wplnst_urls_locations: Total expected rows (approximate): 934
+0060.493 (0) Table wp_wplnst_urls_locations: Total rows added: 934 in 0.14 seconds
+0060.500 (0) Table wp_wplnst_urls_locations: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_wplnst_urls_locations.table.gz - 28.8 Kb)
+0060.513 (0) Table wp_wplnst_urls_locations_att: Total expected rows (approximate): 0
+0060.520 (0) Table wp_wplnst_urls_locations_att: Total rows added: 0 in 0.00 seconds
+0060.524 (0) Table wp_wplnst_urls_locations_att: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_wplnst_urls_locations_att.table.gz - 0.4 Kb)
+0060.540 (0) Table wp_wplnst_urls_status: Total expected rows (approximate): 896
+0060.642 (0) Table wp_wplnst_urls_status: Total rows added: 896 in 0.10 seconds
+0060.648 (0) Table wp_wplnst_urls_status: finishing file (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_wplnst_urls_status.table.gz - 45.3 Kb)
+0060.659 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_options.table.gz (1/29): adding to final database dump
+0060.668 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_users.table.gz (2/29): adding to final database dump
+0060.672 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_usermeta.table.gz (3/29): adding to final database dump
+0060.675 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_commentmeta.table.gz (4/29): adding to final database dump
+0060.677 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_comments.table.gz (5/29): adding to final database dump
+0060.680 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_links.table.gz (6/29): adding to final database dump
+0060.683 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_postmeta.table.gz (7/29): adding to final database dump
+0060.709 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_posts.table.gz (8/29): adding to final database dump
+0060.761 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_term_relationships.table.gz (9/29): adding to final database dump
+0060.766 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_term_taxonomy.table.gz (10/29): adding to final database dump
+0060.769 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_termmeta.table.gz (11/29): adding to final database dump
+0060.772 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_terms.table.gz (12/29): adding to final database dump
+0060.775 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_alm.table.gz (13/29): adding to final database dump
+0060.778 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_mediafromftp_log.table.gz (14/29): adding to final database dump
+0060.787 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_form.table.gz (15/29): adding to final database dump
+0060.791 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_form_meta.table.gz (16/29): adding to final database dump
+0060.795 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_form_view.table.gz (17/29): adding to final database dump
+0060.798 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_incomplete_submissions.table.gz (18/29): adding to final database dump
+0060.801 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_lead.table.gz (19/29): adding to final database dump
+0060.804 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_lead_detail.table.gz (20/29): adding to final database dump
+0060.807 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_lead_detail_long.table.gz (21/29): adding to final database dump
+0060.810 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_lead_meta.table.gz (22/29): adding to final database dump
+0060.813 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_rg_lead_notes.table.gz (23/29): adding to final database dump
+0060.815 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_wplnst_scans.table.gz (24/29): adding to final database dump
+0060.819 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_wplnst_scans_objects.table.gz (25/29): adding to final database dump
+0060.822 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_wplnst_urls.table.gz (26/29): adding to final database dump
+0060.830 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_wplnst_urls_locations.table.gz (27/29): adding to final database dump
+0060.845 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_wplnst_urls_locations_att.table.gz (28/29): adding to final database dump
+0060.848 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db-table-wp_wplnst_urls_status.table.gz (29/29): adding to final database dump
+0060.865 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db.gz: finished writing out complete database file (360 Kb)
+0060.880 (0) Total database tables backed up: 29 (backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db.gz, size: 402075, checksum (SHA1): d3d46a4e017152f92d7b14c047c4a8aa71410452)
+0060.885 (0) Saving backup history
+0060.895 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0060.905 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip: uploads: This file has not yet been successfully uploaded: will queue
+0060.908 (0) backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db.gz: db: This file has not yet been successfully uploaded: will queue
+0060.914 (0) Requesting upload of the files that have not yet been successfully uploaded (3)
+0060.939 (0) Cloud backup selection (1/1): none (last)
+0060.952 (0) No remote despatch: user chose no remote backup service
+0060.960 (0) Recording as successfully uploaded: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads.zip (3837654e2dc9b1d0f2cde0573a23a9d7)
+0060.980 (0) Recording as successfully uploaded: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-uploads2.zip (69392aa02abe8a5444a6965aa23e7fa0)
+0060.990 (0) Recording as successfully uploaded: backup_2016-07-22-1744_Menthalia_d750a93ddb8a-db.gz (70fc63badf82d863de83c1ff84e457b1)
+0061.001 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0061.004 (0) Number of backup sets in history: 4
+0061.006 (0) Examining backup set with datestamp: 1469202286 (Jul 22 2016 15:44:46)
+0061.009 (0) 1469202286: this backup set remains non-empty (1/1); will retain in history
+0061.012 (0) Examining backup set with datestamp: 1469201867 (Jul 22 2016 15:37:47)
+0061.015 (0) 1469201867: this backup set remains non-empty (1/0); will retain in history
+0061.018 (0) Examining backup set with datestamp: 1469201800 (Jul 22 2016 15:36:40)
+0061.021 (0) 1469201800: this backup set remains non-empty (0/1); will retain in history
+0061.023 (0) Examining backup set with datestamp: 1469030017 (Jul 20 2016 15:53:37)
+0061.026 (0) 1469030017: db: this set includes a database (backup_2016-07-20-1753_Menthalia_a6644f4cd274-db.gz); db count is now 3
+0061.028 (0) 1469030017: db: over retain limit (2); will delete this database
+0061.031 (0) Delete file: backup_2016-07-20-1753_Menthalia_a6644f4cd274-db.gz, service=none
+0061.035 (0) Deleting local copy (backup_2016-07-20-1753_Menthalia_a6644f4cd274-db.gz)
+0061.040 (0) 1469030017: this backup set is now empty; will remove from history
+0061.044 (0) 1469030017: deleting log file (log.a6644f4cd274.txt)
+0061.047 (0) Retain: saving new backup history (sets now: 3) and finishing retain operation
+0061.054 (0) Resume backup (d750a93ddb8a, 0): finish run
+0061.061 (0) Decremented the semaphore (fd) by 1
+0061.066 (0) Semaphore (fd) unlocked
+0061.069 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0061.078 (0) The backup apparently succeeded and is now complete
+0061.081 (0) No email will/can be sent - the user has not configured an email address.
+0061.083 (0) Il backup apparentemente è riuscito ed ora è completo

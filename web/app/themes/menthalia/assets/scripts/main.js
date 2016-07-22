@@ -29,7 +29,19 @@
     // Home page
     'home': {
       init: function() {
-        // JavaScript to be fired on the home page
+        setTimeout(function(){
+                  var maxHeight = Math.max.apply(null, $("article.post").map(function ()
+{
+    return $(this).height();
+}).get());
+        if($(window).width()>530)$('article.post').height(maxHeight);
+            var maxHeight = Math.max.apply(null, $("article.post .entry-title").map(function ()
+{
+    return $(this).height();
+}).get());
+        if($(window).width()>530)$('article.post .entry-title').height(maxHeight);
+        },500)
+
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
@@ -94,6 +106,25 @@ function moveFiammifero() {
         $('.entry-title').flowtype({maxFont : 24,fontRatio:25,minimum:500,maximum:1000});
       }
     },
+    'ecm':{
+      init:function(){
+        setTimeout(function(){
+                  var maxHeight = Math.max.apply(null, $("article.eventi .entry-summary").map(function ()
+{
+    return $(this).height();
+}).get());
+        $('article.eventi .entry-summary').find('.data,.entry-title').height(maxHeight);
+        $('article.eventi .entry-summary .data').css('lineHeight',maxHeight+'px');
+        },500);
+
+      }
+    },
+    'single_post':{
+      init:function(){
+        $('.entry-title').flowtype({maxFont : 52,minFont:24,fontRatio:15,maximum:1800});
+        $('.type-post').flowtype({maxFont : 22,minFont:18,fontRatio:30,maximum:1800});
+      }
+    },
     'blog':{
       init:function(){
         $.fn.almComplete = function(alm){
@@ -101,6 +132,17 @@ function moveFiammifero() {
           alm.disable_ajax &&
           $('.posts-navigation').show();
         };
+      }
+    },
+    'purple_people':{
+      init:function(){
+        $('.gallery-icon>a').magnificPopup({
+          type: 'image',
+          gallery:{
+            preload: [0,2], 
+            enabled:true
+          }
+        });
       }
     }
   };

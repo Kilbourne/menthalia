@@ -65,17 +65,19 @@
     }
     .responsive_menu_pro_menu li {
         height: 82px;
-        &:hover {
-            background-color: $menu-hover-color;
-        }
+
         a {
-            @include vertical-centered(absolute);
-            text-transform: uppercase;
-            text-align: center;
-            border-top: medium none !important;
-            &:hover {
-                background-color: transparent !important;
-            }
+position: absolute;
+text-transform: uppercase;
+text-align: center;
+border-top: medium none !important;
+top: 0;
+bottom: 0;
+height: 100% !important;
+box-sizing: border-box !important;
+vertical-align: middle;
+line-height: 58px !important;
+width: 100% !important;
         }
     }
 }
@@ -93,13 +95,3 @@ body.admin-bar {
     }
 }
 
-#responsive_menu_pro .responsive_menu_pro_menu li.current-menu-item > a,
-#responsive_menu_pro .responsive_menu_pro_menu li.current-menu-item > .responsive_menu_pro_append_link,
-#responsive_menu_pro .responsive_menu_pro_menu li.current_page_item > a,
-#responsive_menu_pro .responsive_menu_pro_menu li.current_page_item > .responsive_menu_pro_append_link {
-    background: auto !important;
-}
-
-#responsive_menu_pro .responsive_menu_pro_menu li.current-menu-item {
-    background: $menu-active-color;
-}
