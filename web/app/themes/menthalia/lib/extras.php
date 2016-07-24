@@ -9,16 +9,14 @@ use Roots\Sage\Setup;
  */
 function body_class($classes) {
   // Add page slug if it doesn't exist
-  if(is_page('eventi-passati')){
-    $classes[] = 'eventi-passati';
-  }elseif (is_single() || is_page() && !is_front_page()) {
+if(is_single() || is_page() && !is_front_page()) {
     if (!in_array(basename(get_permalink()), $classes)) {
       $classes[] = basename(get_permalink());
     }
   }
 
   // Add class if sidebar is active
-  if (Setup\display_sidebar()) {
+  if (false && Setup\display_sidebar()) {
     $classes[] = 'sidebar-primary';
   }
 
@@ -39,35 +37,22 @@ function remove_admin_css() {
 }
 add_action('admin_bar_init', __NAMESPACE__ . '\\remove_admin_css');
 
-//add_action('pre_get_posts', __NAMESPACE__ . '\\custom_menthalia_loop');
+function wpse_custom_excerpts($limit,$id,$source=null) {
+    if($source == "content" ? ($excerpt = get_the_content($id)) : ($excerpt = get_the_excerpt($id)));
+    $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
+    $excerpt = strip_shortcodes($excerpt);
+    $excerpt = strip_tags($excerpt);
 
-function custom_menthalia_loop($query) {
-  
-if($query->get_queried_object() && $query->is_page('eventi-passati')){
-         
-    $today = date('Ymd');
-    $query->set('pagename',false); 
-      $query->set('post_type','eventi');
-              $query->set('meta_key','data');
-        $query->set('meta_value',$today);
-        $query->set('meta_compare','<=');
-        $query->set('order','data');
-        $query->set('order','DESC');
-        $query->set('posts_per_page',-1);
-    }
-} 
-function hide_admin_bar() {
-  if(is_user_logged_in() && !is_page_template('service.php') )
-  {
-  
-    return true;
-  }
+    $limit   = $limit?$limit:strlen($excerpt);
+    $excerpt = substr($excerpt, 0, $limit);
+    $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+    //$excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
+    $excerpt = $excerpt.excerpt_more();
+    return $excerpt;
 }
-//add_filter( 'show_admin_bar',__NAMESPACE__ . '\\hide_admin_bar' );
-
 function wpse_allowedtags() {
     // Add custom tags to this string
-        return '<br>,<em>,<i>,<ul>,<ol>,<li>,<a>,<p>,<strong>'; 
+        return '<br>,<em>,<i>,<ul>,<ol>,<li>,<a>,<p>,<strong>';
     }
 
 
@@ -84,7 +69,7 @@ function wpse_allowedtags() {
 
             //Set the excerpt word count and only break after sentence is complete.
                 $excerpt_word_count = 75;
-                $excerpt_length = apply_filters('excerpt_length', $excerpt_word_count); 
+                $excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
                 $tokens = array();
                 $excerptOutput = '';
                 $count = 0;
@@ -92,9 +77,9 @@ function wpse_allowedtags() {
                 // Divide the string into tokens; HTML tags, or words, followed by any whitespace
                 preg_match_all('/(<[^>]+>|[^<>\s]+)\s*/u', $wpse_excerpt, $tokens);
 
-                foreach ($tokens[0] as $token) { 
+                foreach ($tokens[0] as $token) {
 
-                    if ($count >= $excerpt_length && preg_match('/[\,\;\?\.\!]\s*$/uS', $token)) { 
+                    if ($count >= $excerpt_length && preg_match('/[\,\;\?\.\!]\s*$/uS', $token)) {
                     // Limit reached, continue until , ; ? . or ! occur at the end
                         $excerptOutput .= trim($token);
                         break;
@@ -109,8 +94,8 @@ function wpse_allowedtags() {
 
             $wpse_excerpt = trim(force_balance_tags($excerptOutput));
 
-                $excerpt_end = ' <a href="'. esc_url( get_permalink() ) . '">' . '&nbsp;&raquo;&nbsp;' . sprintf(__( 'Read more about: %s &nbsp;&raquo;', 'wpse' ), get_the_title()) . '</a>'; 
-                //$excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end); 
+                $excerpt_end = ' <a href="'. esc_url( get_permalink() ) . '">' . '&nbsp;&raquo;&nbsp;' . sprintf(__( 'Read more about: %s &nbsp;&raquo;', 'wpse' ), get_the_title()) . '</a>';
+                //$excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
                 if($more){
                 $pos = strrpos($wpse_excerpt, '</');
                 if ($pos !== false)
@@ -120,56 +105,36 @@ function wpse_allowedtags() {
                 // After the content
                 $wpse_excerpt .= excerpt_more(); /*Add read more in new paragraph */
                 }
-            return $wpse_excerpt;   
+            return $wpse_excerpt;
 
         }
         return $wpse_excerpt;
     }
 
-
-
-//remove_filter('get_the_excerpt',  'wp_trim_excerpt');
-//add_filter('get_the_excerpt',  __NAMESPACE__ . '\\wpse_custom_wp_trim_excerpt'); 
-
-function wpse_custom_excerpts($limit,$id,$source=null) {
-    if($source == "content" ? ($excerpt = get_the_content($id)) : ($excerpt = get_the_excerpt($id)));
-    $excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
-    $excerpt = strip_shortcodes($excerpt);
-    $excerpt = strip_tags($excerpt);
-    
-    $limit   = $limit?$limit:strlen($excerpt);
-    $excerpt = substr($excerpt, 0, $limit);
-    $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
-    //$excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
-    $excerpt = $excerpt.excerpt_more();
-    return $excerpt;
-}
-
-
 function get_attachment_id( $attachment_url ) {
  global $wpdb;
   $attachment_id = false;
- 
+
   // If there is no url, return.
   if ( '' == $attachment_url )
     return;
- 
+
   // Get the upload directory paths
   $upload_dir_paths = wp_upload_dir();
- 
+
   // Make sure the upload path base directory exists in the attachment URL, to verify that we're working with a media library image
   if ( false !== strpos( $attachment_url, $upload_dir_paths['baseurl'] ) ) {
- 
+
     // If this is the URL of an auto-generated thumbnail, get the URL of the original image
     $attachment_url = preg_replace( '/-\d+x\d+(?=\.(jpg|jpeg|png|gif)$)/i', '', $attachment_url );
- 
+
     // Remove the upload path base directory from the attachment URL
     $attachment_url = str_replace( $upload_dir_paths['baseurl'] . '/', '', $attachment_url );
- 
+
     // Finally, run a custom database query to get the attachment ID from the modified attachment URL
     $attachment_id = $wpdb->get_var( $wpdb->prepare( "SELECT wposts.ID FROM $wpdb->posts wposts, $wpdb->postmeta wpostmeta WHERE wposts.ID = wpostmeta.post_id AND wpostmeta.meta_key = '_wp_attached_file' AND wpostmeta.meta_value = '%s' AND wposts.post_type = 'attachment'", $attachment_url ) );
- 
+
   }
- 
+
   return $attachment_id;
 }

@@ -72,7 +72,8 @@
     "wpackagist-plugin/simple-history": "2.7.3",
     "wpackagist-plugin/ns-cloner-site-copier": "3.0.5.7",
     "wpackagist-plugin/xslt": "1.0.1",
-    "wpackagist-plugin/bot-block-stop-spam-google-analytics-referrals": "2.6"
+    "wpackagist-plugin/bot-block-stop-spam-google-analytics-referrals": "2.6",
+    "mobiledetect/mobiledetectlib": "^2.8"
 
   },
   "require-dev": {
