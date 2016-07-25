@@ -48,7 +48,7 @@
       }
     },
     // About us page, note the change from about-us to about_us.
-    'page_template_service': {
+    'page_template_area_methalia': {
       init: function() {
                 var imageRatio=0.46875,
         inverseRatio=1.6,

@@ -2,7 +2,7 @@
 /**
  * Template Name: Area Menthalia
  */
-use \Menthalia;
+use \Menthalia as Menthalia;
 
 Menthalia\service_menu_background();
 if(get_field('video')){

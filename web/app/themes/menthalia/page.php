@@ -1,5 +1,5 @@
 <?php
-use \Menthalia;
+use \Menthalia as Menthalia;
 while (have_posts()) : the_post();
 
 

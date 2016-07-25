@@ -459,8 +459,7 @@ width: 7%;
 	@media(max-width:650px){
 		column-count: 1;
 	}
-}
-.card{
+	.card{
 	position: relative;
 display: inline-block;
 width: 100%;
@@ -496,6 +495,8 @@ border-radius: .25rem;
 
 }
 }
+}
+
 
 .posts-navigation{
 	background-color: #662D91;

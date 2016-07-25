@@ -4,23 +4,23 @@ use Roots\Sage\Extras;
 //add_action('pre_get_posts', __NAMESPACE__ . '\\custom_menthalia_loop');
 
 Class Data{
-   private $old_month = '';
-private $old_year = '';
+   private static $old_month = '';
+private static $old_year = '';
   public static function set_old_month($name) {
-    $this->old_month = $name;
+    self::$old_month = $name;
   }
 
   public static function get_old_month() {
-    return $this->old_month;
+    return self::$old_month;
   }
 
 
   public static function set_old_year($name) {
-    $this->old_year = $name;
+    self::$old_year = $name;
   }
 
   public static function get_old_year() {
-    return $this->old_year;
+    return self::$old_year;
   }
 }
 
