@@ -101,7 +101,7 @@ if(have_posts()):?>
 <div class="posts-container">
 <?php
 while (have_posts()) : the_post();
-  get_template_part('repeaters/blog');
+  get_template_part('templates/content-home-blog');
 endwhile;
  ?>
 </div>
