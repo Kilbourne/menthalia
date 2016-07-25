@@ -10,7 +10,8 @@ $image=get_the_post_thumbnail( get_the_id(), 'full' );
     <?php } ?>
   <div class="entry-summary">
   	<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <?php echo Extras\wpse_custom_wp_trim_excerpt('',false); ?>
+    <?php get_template_part('templates/entry-meta');
+    echo Extras\wpse_custom_wp_trim_excerpt('',false); ?>
     <div class="juiz_sps_links  counters_both juiz_sps_displayed_bottom">
 <p class="screen-reader-text juiz_sps_maybe_hidden_text">Share the post <?php the_title(); ?></p>
 

@@ -138,3 +138,18 @@ function get_attachment_id( $attachment_url ) {
 
   return $attachment_id;
 }
+
+
+function back_link(){
+  $ref = $_SERVER['HTTP_REFERER'];
+  
+  if(strpos($ref, get_home_url()) !== FALSE){
+    $url=htmlspecialchars($ref);
+    $change=true;
+  }else{
+    $url=get_site_url();
+    $change=false;
+  }
+  
+  return "<a class='back-link' href='".$url."' ".($change?"onclick='event.preventDefault();history.back(-1)'":"")." >"."<< ".__("Indietro","sage")."</a>"; 
+  }

@@ -1,13 +1,16 @@
-<?php while (have_posts()) : the_post();
+<?php 
+   use Roots\Sage\Extras;
+while (have_posts()) : the_post();
 $data_field=get_field('data',$post->ID);
 $date=DateTime::createFromFormat('Ymd',$data_field);
-$title_background_color=get_field('title_background_color')
-$title_color=get_field('title_color')
+$title_background_color=get_field('title_background_color');
+$title_color=get_field('title_color');
 ?>
 <style  >
   main.main{background-color: <?php  echo get_field('background_color');?>;}
 </style>
   <article <?php post_class(); ?>  style="background-color: <?php  echo get_field('article_background_color'); ?> ;">
+  <?php echo Extras\back_link(); ?>
   <div class="entry-summary">
     <div class="entry-image"> <?php the_post_thumbnail(); ?></div>
     <h2 class="entry-title" style="background-color: <?php  echo $title_background_color; ?> ;color: <?php  echo $title_color; ?>;"><?php the_title(); ?></h2>
