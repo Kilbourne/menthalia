@@ -2,15 +2,17 @@
 <?php
 $aree_menthalia=get_pages(array(
   'meta_key' => '_wp_page_template',
-  'meta_value' => 'area-methalia.php'
+  'meta_value' => 'area-methalia.php',
+  'sort_column'=>'post_date'
 ));
 $sfondo_blog_url=get_field('immagine_sfondo_blog','options');
 $video_mp4=get_field('video_mp4','options');
 $video_webm=get_field('video_webm','options');
 $video_ogv=get_field('video_ogv','options');
+$video_poster=get_field('video_poster','options');
  ?>
  <section id="intro-video">
- 		<video id="video_background" preload="auto" autoplay="true" >
+ 		<video id="video_background" preload="auto" autoplay="true" poster="<?php 	echo $video_poster ?>" >
  		<source src="<?php echo $video_webm; ?>" type="video/webm">
         <source src="<?php echo $video_mp4; ?>" type="video/mp4">
         <source src="<?php echo $video_ogv; ?>" type="video/ogg">
@@ -40,8 +42,8 @@ $video_ogv=get_field('video_ogv','options');
 			?>
 		<li class="aree-menthalia" style="background-color:<?php echo $colore; ?>" >
 			<div class="container">
-			<?php echo '<a class="area-image area-child '.$side.'" href="'. $link.'" >'.wp_get_attachment_image( $image ,'full').'</a>';
-				echo '<a class="area-title area-child" href="'.  $link.'" ><h3>'.get_the_title( $post_id ).'<span class="subtitle">'.$subtitle.'</span></h3></a><a class="area-content area-child" href="'. $link.'" ><p>'.$value->post_content.'</p></a>';
+			<?php echo '<a class="area-image area-child '.$side.'" href="'. $link.'" '.($url?'target="_blank"':'').' >'.wp_get_attachment_image( $image ,'full').'</a>';
+				echo '<a class="area-title area-child" href="'.  $link.'"  '.($url?'target="_blank"':'').'  ><h3>'.get_the_title( $post_id ).'<span class="subtitle">'.$subtitle.'</span></h3></a><a class="area-content area-child" href="'. $link.'"   '.($url?'target="_blank"':'').' ><p>'.$value->post_content.'</p></a>';
 
 			?>
 			</div>
@@ -60,6 +62,7 @@ $video_ogv=get_field('video_ogv','options');
     $old_query=$wp_query;
     $args_team=array(
   'post_type'        => 'team',
+  'order'=>'ASC'
   );
 $detect = new Mobile_Detect;
 if($detect->is_mobile()){

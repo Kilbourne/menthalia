@@ -1,7 +1,7 @@
 <?php
 namespace Menthalia;
 use Roots\Sage\Extras;
-//add_action('pre_get_posts', __NAMESPACE__ . '\\custom_menthalia_loop');
+add_action('pre_get_posts', __NAMESPACE__ . '\\custom_menthalia_loop');
 
 Class Data{
    private static $old_month = '';
@@ -26,17 +26,12 @@ private static $old_year = '';
 
 function custom_menthalia_loop($query) {
 
-if($query->get_queried_object() && $query->is_page('eventi-passati')){
-
-    $today = date('Ymd');
-    $query->set('pagename',false);
-      $query->set('post_type','eventi');
-              $query->set('meta_key','data');
-        $query->set('meta_value',$today);
-        $query->set('meta_compare','<=');
-        $query->set('order','data');
+if (!is_admin() && isset($query->query['post_type']) && $query->query['post_type'] === 'eventi' ) {
+      
+        
+        $query->set('meta_key','data');
         $query->set('order','DESC');
-        $query->set('posts_per_page',-1);
+        $query->set('orderby','meta_value');
     }
 }
 
@@ -46,7 +41,7 @@ function video_source(){
   $display='';
   foreach (['webm','mp4','ogv'] as $format) {
     if(Extras\get_attachment_id($filename.'.'.$format))
-      $display.= '<source src="'.$filename.'.'.$format.'" type="video/'.($format==='ogv'?'ogg':$format ).'"';
+      $display.= '<source src="'.$filename.'.'.$format.'" type="video/'.($format==='ogv'?'ogg':$format ).'" >';
   }
   return $display;
 }
@@ -62,8 +57,8 @@ function service_menu_background(){
 
 function intro_video(){
 
-    $video_pattern= get_field('pattern');
-    $claim=get_field('claim');
+    $video_pattern= get_field('pattern',get_the_id());
+    $claim=get_field('claim',get_the_id());
 
 echo'<div class="video-cont" >
   <video id="video" preload="auto" autoplay="true" >

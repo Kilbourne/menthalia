@@ -106,7 +106,9 @@ $wp_query=$original_query;
 
         $events=get_posts([
         'post_type'=>'eventi',
+        'orderby'=>'meta_value',
         'order'=>'DESC',
+        'meta_key'=>'data',
         'posts_per_page'=>3]);
 include 'templates/area-eventi.php';
     }

@@ -315,12 +315,15 @@ background-size: cover;
     color: #662D91;
     //font-weight: 800;
     left: 50%;
-    top: 0;
+    top: 40%;
     bottom:0;
     width: 100%;
     transform: translate(-50%,0);
     text-align: center;
     z-index: 11;
+    transition: opacity 1s;
+    >{ margin:0;}
+    @media(max-width:540px){ display:none;}
 }
 }
 .video-cont{
@@ -378,6 +381,13 @@ width: 7%;
 		padding:0 6%;
         >a {
             text-decoration: none;
+        }
+        img{
+        	transition: transform 1s;
+
+        &:hover{
+        	transform: scale(1.2) rotate(30deg);
+        }
         }
     }
     .service-title {
@@ -796,6 +806,9 @@ border: 1px solid;
 	display: inline-block;
 	vertical-align: top;
 	width: 49%;
+	@media(max-width: 540px){
+		width:100%;
+	}
 }
 
 body.purple-people{

@@ -5,7 +5,7 @@ $display_services['list']='';
 $display_services['desc']='';
 
 $display_services['list'].='<div class="service-list-cont" style="background-color: '.get_field('background_servizi').'" ><div class="service-list-wrap"><div class="service-list-background"></div>  <ul class="services-list list" > ';
-$display_services['desc'].='<div class="service-desc-cont" style="background-color: '. get_field('background_servizi_descrizioni').'" ><div class="service-desc-wrap"> <div class="linguetta" style="border-bottom-color:'. get_field('background_servizi_descrizioni').'"></div> <ul class="services-desc list">';
+$display_services['desc'].='<div class="service-desc-cont" style="background-color: '. get_field('background_servizi_descrizioni').'" ><div class="service-desc-wrap"> <div class="linguetta" style="border-bottom-color:'. get_field('background_servizi_descrizioni').'"></div> <ul id="services-desc" class="services-desc list">';
 foreach ($right_services as $key => $service){
 
   $id=$service->ID;

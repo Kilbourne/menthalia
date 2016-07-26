@@ -19,8 +19,12 @@
     'common': {
       init: function() {
         var s = skrollr.init();
+        $('video').each(function(index, el) {
+          if(el.attributes.autoplay.value=="true") el.play();
+        });
         $('.site-claim').flowtype({minFont : 19,maxFont: 32});
         $('.aree-menthalia .area-title').flowtype({minFont : 40,maxFont: 70,maximum : 1280,fontRatio : 10});
+        $('.video-cont .claim').flowtype({minFont : 24,maxFont: 48,maximum : 1280,fontRatio : 25});
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -59,22 +63,31 @@
         $(window).resize(function() { //parallaxResize(); 
           moveFiammifero();
         })
+        function ScrollDesc(){
+          var dest=$('#services-desc').offset().top-(( $(window).height() - $('#services-desc').height() )/2);
+                  if( Math.abs(dest-$(window).scrollTop())<$(window).height()*.4   ) return;
+                              $('html,body').animate({
+                scrollTop: dest
+            }, 1250, 'swing');
+        }
 $(window).scroll(moveFiammifero);
         $('.service>a').click(function(event) {
             event.preventDefault();
 
             var parent =$(this).parent();
-            if(parent.hasClass('active')) return;
+            if(parent.hasClass('active')){ ScrollDesc(); return; }
             $('.service').removeClass('active');
             parent.addClass('active');
             var i =parent.index('.service');
             $('.service-desc.active').fadeOut('400', function() {
               $(this).removeClass('active');
+
               $('.service-desc').eq(i).fadeIn('400', function() {
                   $(this).addClass('active');
+                  
               });
             });
-
+ScrollDesc();
         });
 function moveFiammifero() {
             var y = $(window).scrollTop(),
@@ -94,6 +107,14 @@ function moveFiammifero() {
           parallaxImages.width(val*inverseRatio);          
           moveFiammifero();
         }
+                setTimeout(function(){
+                  var maxHeight = Math.max.apply(null, $(".service-title").map(function ()
+{
+    return $(this).height();
+}).get());
+        $('.service-title').height(maxHeight);
+            
+        },500);
       }
     },
     'post_type_archive_eventi':{

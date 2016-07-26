@@ -20,7 +20,7 @@ use Roots\Sage\Wrapper;
       get_template_part('templates/header');
     ?>
 
-      <div class="content row">
+      <div id="skrollr-body" class="content row">
         <main class="main skrollable "  data-0="margin-top:158px;"  data-80="margin-top:118px;">
           <?php include Wrapper\template_path(); ?>
         </main><!-- /.main -->
