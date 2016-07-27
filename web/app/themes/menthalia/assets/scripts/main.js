@@ -1,76 +1,63 @@
-/* ========================================================================
- * DOM-based Routing
- * Based on http://goo.gl/EUTi53 by Paul Irish
- *
- * Only fires on body classes that match. If a body class contains a dash,
- * replace the dash with an underscore when adding it to the object below.
- *
- * .noConflict()
- * The routing is enclosed within an anonymous function so that you can
- * always reference jQuery with $, even when in .noConflict() mode.
- * ======================================================================== */
-
 (function($) {
+        function maxH($el,cond){
+          if(cond){
+            $el.height("auto");
+            var maxHeight = Math.max.apply(null, $el.map(function (){return $(this).height();}).get());
+            var filtred=$el.filter(function(){ return $(this).height()!==maxHeight;});
+            filtred.height(maxHeight);
+              }
+        }
 
-  // Use this variable to set up the common and page specific functions. If you
-  // rename this variable, you will also need to rename the namespace below.
+        function setMaxH(fn){
+            setTimeout(fn,500);
+            $(window).resize(fn);
+        }
   var Sage = {
-    // All pages
+
     'common': {
       init: function() {
-        var s = skrollr.init();
-        $('video').each(function(index, el) {
-          if(el.attributes.autoplay.value=="true") el.play();
-        });
+        var s = skrollr.init({forceHeight: false});
+        //$('video').each(function(index, el) {
+        //  if(el.attributes.autoplay.value=="true") el.play();
+        //});
         $('.site-claim').flowtype({minFont : 19,maxFont: 32});
         $('.aree-menthalia .area-title').flowtype({minFont : 40,maxFont: 70,maximum : 1280,fontRatio : 10});
         $('.video-cont .claim').flowtype({minFont : 24,maxFont: 48,maximum : 1280,fontRatio : 25});
       },
-      finalize: function() {
-        // JavaScript to be fired on all pages, after page specific JS is fired
-      }
     },
-    // Home page
     'home': {
       init: function() {
-        setTimeout(function(){
-                  var maxHeight = Math.max.apply(null, $("article.post").map(function ()
-{
-    return $(this).height();
-}).get());
-        if($(window).width()>530)$('article.post').height(maxHeight);
-            var maxHeight = Math.max.apply(null, $("article.post .entry-title").map(function ()
-{
-    return $(this).height();
-}).get());
-        if($(window).width()>530)$('article.post .entry-title').height(maxHeight);
-        },500)
 
-      },
-      finalize: function() {
-        // JavaScript to be fired on the home page, after the init JS
+        setMaxH(        function (){
+          var posts=$("article.post"),
+          cond=$(window).width()>530;
+
+          maxH(posts.find(".entry-title"),cond);
+          maxH(posts.find(".entry-image"),cond);
+          maxH(posts,cond);
+        });
+
       }
     },
-    // About us page, note the change from about-us to about_us.
     'page_template_area_methalia': {
       init: function() {
-                var imageRatio=0.46875,
-        inverseRatio=1.6,
-        menuMinHeight=118;
-                  var parallax=$('#parallax'),images,
-          parallaxImages=parallax.add(parallax.children('.background'));
-          //parallaxResize();
-        $(window).resize(function() { //parallaxResize(); 
-          moveFiammifero();
-        })
-        function ScrollDesc(){
+       //        var imageRatio=0.46875,
+       //inverseRatio=1.6;
+       var menuMinHeight=118;
+       //          var parallax=$('#parallax'),images,
+       //  parallaxImages=parallax.add(parallax.children('.background'));
+       //  //parallaxResize();
+       //$(window).resize(function() { //parallaxResize();
+       //  moveFiammifero();
+       //})
+       function ScrollDesc(){
           var dest=$('#services-desc').offset().top-(( $(window).height() - $('#services-desc').height() )/2);
                   if( Math.abs(dest-$(window).scrollTop())<$(window).height()*.4   ) return;
                               $('html,body').animate({
                 scrollTop: dest
             }, 1250, 'swing');
         }
-$(window).scroll(moveFiammifero);
+//$(window).scroll(moveFiammifero);
         $('.service>a').click(function(event) {
             event.preventDefault();
 
@@ -84,7 +71,7 @@ $(window).scroll(moveFiammifero);
 
               $('.service-desc').eq(i).fadeIn('400', function() {
                   $(this).addClass('active');
-                  
+
               });
             });
 ScrollDesc();
@@ -95,26 +82,22 @@ function moveFiammifero() {
             h=fiammifero.height(),
             y2=(parallax.height()*35)/100;
             if(y<h*0.27){
-             fiammifero.css('top', y2);  
+             fiammifero.css('top', y2);
             }else{
              fiammifero.css('top', y+y2-(h/4));
-            }           
+            }
 }
         function parallaxResize(){
           var vpW=$( window ).width()*imageRatio,H=$( window ).height()-menuMinHeight;
           var val=vpW>H?H:vpW;
           parallax.height(val);
-          parallaxImages.width(val*inverseRatio);          
+          parallaxImages.width(val*inverseRatio);
           moveFiammifero();
         }
-                setTimeout(function(){
-                  var maxHeight = Math.max.apply(null, $(".service-title").map(function ()
-{
-    return $(this).height();
-}).get());
-        $('.service-title').height(maxHeight);
-            
-        },500);
+           setMaxH(        function (){
+          maxH($(".service-title"),true);
+        });
+
       }
     },
     'post_type_archive_eventi':{
@@ -160,7 +143,7 @@ function moveFiammifero() {
         $('.gallery-icon>a').magnificPopup({
           type: 'image',
           gallery:{
-            preload: [0,2], 
+            preload: [0,2],
             enabled:true
           }
         });

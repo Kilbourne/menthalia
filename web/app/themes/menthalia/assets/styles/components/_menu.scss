@@ -4,7 +4,7 @@
     height: $menu-fullheight;
     padding: 0px;
     background-color: $brand-primary;
-    z-index: $menu-zindex;    
+    z-index: $menu-zindex;
     &:hover {
         background-color: $menu-hover-color;
     }
@@ -32,11 +32,13 @@
     width: $menu-width;
     height: 100vh;
     padding: 0px;
-    z-index: $header-zindex;   
-    max-width: 100% !important; 
+    z-index: $header-zindex;
+    max-width: 100% !important;
     //box-sizing: border-box !important;
-    padding-top: 148px;
     overflow-y: hidden;
+    &.skrollable{
+      padding-top: 148px;
+    }
     &.responsive_menu_pro_opened {
         position: absolute;
     }
@@ -87,7 +89,7 @@ body.admin-bar {
     #responsive_menu_pro_button {
         margin-top: 0 !important;
     }
-    #responsive_menu_pro {        
+    #responsive_menu_pro {
         height: calc( 100vh - 32px );
         @media screen and ( max-width: 782px) {
             height: calc( 100vh - 48px );
@@ -95,3 +97,4 @@ body.admin-bar {
     }
 }
 
+body.medical-agency #responsive_menu_pro .responsive_menu_pro_menu li.current_page_item > a { color:#fff !important;}
