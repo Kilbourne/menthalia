@@ -1,9 +1,8 @@
+
 html{
 	font-family: open_sans;
 }
-body{
-	height: auto !important;
-}
+
 section{
 	position:relative;
 	overflow:hidden;
@@ -17,4 +16,5 @@ main{
   overflow: hidden;
 max-width: 100%;
 margin: 0 auto;
+box-sizing: content-box;
 }

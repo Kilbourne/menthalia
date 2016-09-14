@@ -44,7 +44,7 @@
                 line-height: 0.8;
                 display:inline-block;
                 .subtitle {
-                    font-size: 0.5em;
+                    font-size: 0.455em;
                     display: inline-block;
                 }
                 >h3 {
@@ -166,6 +166,7 @@
         padding: 8px;
         color: #fff;
         font-size: 0.875rem;
+        box-sizing: border-box;
         @include media-query(palm) {
             width: 47%;
             margin: 0 1.5% 1.5rem;
@@ -381,14 +382,7 @@ width: 7%;
 		padding:0 6%;
         >a {
             text-decoration: none;
-        }
-        img{
-        	transition: transform 1s;
-
-        &:hover{
-        	transform: scale(1.2) rotate(30deg);
-        }
-        }
+        }        
     }
     .service-title {
         color: #fff;
@@ -543,7 +537,7 @@ display: block;
 
 }
 #ecm-event-list{
-	background-color:#fff;
+	background-color: #eee;
 	.archivio-link{
 		font-size:1rem;
 		display:block;
@@ -653,7 +647,7 @@ body.blog main{
 	padding: 1.5rem 0 0;
 .posts-navigation{ display:none;}
 }
-#ecm-event-list,body.post-type-archive-eventi .inner{
+#ecm-event-list .eventi-cont,body.post-type-archive-eventi .inner{
 	
 		
 		overflow: hidden;
@@ -783,32 +777,51 @@ border: 1px solid;
 			vertical-align: top;
 			margin-left: 10px;
 		}
+
 	}
 }
+
 .alert-warning{margin-top: 1.5rem;}
-.archivio-eventi{margin-bottom: 1.5rem;}
+//.archivio-eventi{margin-bottom: 1.5rem;}
 .alert-warning,.archivio-eventi{
 	font-size: 1.5rem;
-	>a{text-decoration: none;}
+	>a,.archivio-link{text-decoration: none;}
 }
-
+.contatti-grid{
+	overflow: hidden;
+display: inline-block;
+width: 100%;
+}
+.contatti-col {
+    width: 50%;
+    float: left;
+    padding:0 5%;
+    @include media-query(palm){
+    	width:100%;
+    	float:none;
+    	text-align: center;
+    }
+}
 .sedi-container{
-	background-color: rgb(109, 74, 77);
-	color: #D4B77E;
+	background-color: rgb(238, 238, 238);
+	//color: #D4B77E;
 }
 .sedi-wrapper{
 	max-width: 990px;
 	margin: 0px auto;
 	padding: 2rem 5%;
 }
-.contatti-sedi{ text-align: center; }
+.contatti-sedi{ text-align: left; }
 .contatti-sede{
-	display: inline-block;
-	vertical-align: top;
-	width: 49%;
-	@media(max-width: 540px){
-		width:100%;
+	p:first-of-type{
+		margin-top:0;
 	}
+	//display: inline-block;
+	//vertical-align: top;
+	//width: 49%;
+	//@media(max-width: 540px){
+	//	width:100%;
+	//}
 }
 
 body.purple-people{
@@ -818,6 +831,17 @@ body.purple-people{
 		margin-right: auto;
 		padding: 1rem 2% 0px;
 		strong{ color:#882D91;}
+		>button{
+			background: transparent none repeat scroll 0px 0px;
+border: 2px solid;
+padding: 10px 5%;
+color: rgb(136, 45, 145);
+font-weight: 700;
+cursor: pointer;
+display: block;
+margin: 1rem auto;
+		}
+		.info-cont{ display:none;}
 	}
 	.image-cont{
 		background-color: #000;
@@ -841,10 +865,34 @@ body.purple-people{
 }
 
 body.contatti{
+	.gform_wrapper .gfield_required{
+		color: #723887;
+	}
+	.contatti-info{
+		margin-bottom: 4rem;
+	}
+	.gform_wrapper .field_sublabel_below ul.gfield_checkbox li label{
+		font-size: 0.8rem;
+	}
+	.gform_title{
+		color:#873BAB;
+	}
+	.gform_wrapper label.gfield_label{
+		font-weight: 400;
+	}
+	.h3-contatti{
+		margin-bottom: 0;
+	}
+	.contatti-info-content{
+		text-align: center;
+	}
 	.image-cont{
 		background-color: #6D4A4D;		
 		>img{max-width:100%;height:auto;}
 	}
+	.gform_wrapper .top_label input.medium{
+			width:100% !important;
+		}
 			.gform_heading>h3.gform_title{
 			text-align: center;
 		}
@@ -855,21 +903,63 @@ body.contatti{
 			line-height: 20.8px;
 			vertical-align: top;
 			margin-left: 10px;
+			input{
+				vertical-align: top;
+				&:first-child{
+					margin-top:4px;
+				}
+			}
 		}
 		#gform_submit_button_1{
     background: transparent none repeat scroll 0% 0%;
     border: 2px solid;
     padding: 10px 5%;
-    color: rgb(212, 183, 126);
+    color: #723887;
     font-weight: 700;
     cursor: pointer;
+
+}
+.gform_footer{
+	text-align: center;
 }
 }
 .video-cont{
 	font-size: 0;
-	//margin-bottom: -1.6%;
+	//max-height: 640px;
+	height:0;
+	padding-bottom: 31%;
+	overflow:hidden;
 }
 #video{
 	width: 100%;
 margin-top: -15%;
+}
+body.creative-agency{ #video{margin-top: -24%;}}
+#comitato{
+	    padding: 0px 5%;
+	    .membri-cont{ display:none;overflow:hidden;}
+	    .membri{
+	    	margin: 1.5rem auto;
+display: block;
+background-color: transparent;
+border: 1px solid #5d5d5d;
+padding: 5px 10px;
+color: rgb(93, 93, 93);
+	    }
+	.comitato-cont{
+		max-width: 900px;
+margin: 0px auto;
+color: rgb(93, 93, 93);
+		.entry-title{ text-align: center;}
+		.entry-desc{text-align: justify;}
+		.menmber-cont{ text-align: justify;}
+		.member{ display:inline-block;
+
+		width: 49%;
+vertical-align: top;
+@include media-query(palm){
+	width:100%;
+}
+}
+	}
 }

@@ -6,7 +6,7 @@
         margin: 0px auto;
         max-width: $homepage-container-width;
         color: #fff;
-        overflow: hidden;
+
         padding: 1.5rem 0.9rem;
         font-size: .8rem;
         display: flex;
@@ -51,13 +51,13 @@ body.ecm,body.post-type-archive-eventi,body.single-eventi,body.single-post,body.
         .fb:before {
             background-position: 0;
         }
-        .insta:before {
+        .twi:before {
             background-position: 94px;
         }
         .linkdn:before {
             background-position: 171px;
         }
-        .twi:before {
+        .insta:before {
             background-position: 248px;
         }
     }

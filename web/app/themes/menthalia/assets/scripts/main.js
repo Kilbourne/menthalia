@@ -1,4 +1,5 @@
 (function($) {
+
         function maxH($el,cond){
           if(cond){
             $el.height("auto");
@@ -16,13 +17,18 @@
 
     'common': {
       init: function() {
-        var s = skrollr.init({forceHeight: false});
+        var md = new MobileDetect(window.navigator.userAgent);
+    if (md.mobile() === null ) var s = skrollr.init({forceHeight:false});
         //$('video').each(function(index, el) {
         //  if(el.attributes.autoplay.value=="true") el.play();
         //});
         $('.site-claim').flowtype({minFont : 19,maxFont: 32});
         $('.aree-menthalia .area-title').flowtype({minFont : 40,maxFont: 70,maximum : 1280,fontRatio : 10});
         $('.video-cont .claim').flowtype({minFont : 24,maxFont: 48,maximum : 1280,fontRatio : 25});
+        $('.membri').click(function(event) {
+          $('.membri-cont').slideToggle(400);
+          
+        });
       },
     },
     'home': {
@@ -140,6 +146,10 @@ function moveFiammifero() {
     },
     'purple_people':{
       init:function(){
+                $('.inner-container > button').click(function(event) {
+          $('.inner-container > .info-cont').slideToggle(400);
+          
+        });
         $('.gallery-icon>a').magnificPopup({
           type: 'image',
           gallery:{

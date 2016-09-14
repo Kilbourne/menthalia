@@ -1,0 +1,161 @@
+0000.000 (0) Opened log file at time: Wed, 27 Jul 2016 08:04:14 +0000 on http://192.168.1.18/menthalia/wp
+0000.003 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.11.21.22 WP: 4.5.3 PHP: 5.6.19 (Windows NT WEB 6.2 build 9200 (Windows 8 Professional Edition) i586) MySQL: 5.5.5 Server: Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.19 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 36.4M | 36.8M) multisite: N mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.005 (0) Free space on disk containing Updraft's temporary directory: 166463.7 Mb
+0000.010 (0) Tasks: Backup files: 0 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.022 (0) Requesting semaphore lock (d)
+0000.027 (0) Semaphore (d) was stuck, set lock time to 2016-07-27 08:04:14
+0000.033 (0) Semaphore (d) reset to 1
+0000.038 (0) Set semaphore last lock (d) time to 2016-07-27 08:04:14
+0000.041 (0) Semaphore lock (d) complete
+0000.052 (0) Backup run: resumption=0, nonce=dd603dc28d7f, begun at=1469606654 (0s ago), job type=backup
+0000.060 (0) Scheduling a resumption (1) after 300 seconds (1469606954) in case this run gets aborted
+0000.070 (0) This backup run is not intended for files - skipping
+0000.073 (0) Beginning creation of database dump (WordPress DB)
+0000.090 (0) Table wp_options: Total expected rows (approximate): 222
+0000.106 (0) Table wp_options: Total rows added: 221 in 0.01 seconds
+0000.109 (0) Table wp_options: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_options.table.gz - 27.8 Kb)
+0000.124 (0) Table wp_users: Total expected rows (approximate): 1
+0000.129 (0) Table wp_users: Total rows added: 1 in 0.00 seconds
+0000.133 (0) Table wp_users: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_users.table.gz - 0.6 Kb)
+0000.146 (0) Table wp_usermeta: Total expected rows (approximate): 27
+0000.151 (0) Table wp_usermeta: Total rows added: 27 in 0.00 seconds
+0000.161 (0) Table wp_usermeta: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_usermeta.table.gz - 1.4 Kb)
+0000.186 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0000.198 (0) Table wp_commentmeta: Total rows added: 0 in 0.00 seconds
+0000.201 (0) Table wp_commentmeta: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_commentmeta.table.gz - 0.4 Kb)
+0000.218 (0) Table wp_comments: Total expected rows (approximate): 0
+0000.223 (0) Table wp_comments: Total rows added: 0 in 0.00 seconds
+0000.227 (0) Table wp_comments: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_comments.table.gz - 0.5 Kb)
+0000.237 (0) Table wp_links: Total expected rows (approximate): 0
+0000.243 (0) Table wp_links: Total rows added: 0 in 0.00 seconds
+0000.246 (0) Table wp_links: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_links.table.gz - 0.4 Kb)
+0000.258 (0) Table wp_postmeta: Total expected rows (approximate): 9445
+0000.469 (0) Table wp_postmeta: Total rows added: 9190 in 0.21 seconds
+0000.473 (0) Table wp_postmeta: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_postmeta.table.gz - 91.5 Kb)
+0000.482 (0) Table wp_posts: Total expected rows (approximate): 1274
+0000.647 (0) Table wp_posts: Total rows added: 1392 in 0.16 seconds
+0000.659 (0) Table wp_posts: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_posts.table.gz - 200.9 Kb)
+0000.676 (0) Table wp_term_relationships: Total expected rows (approximate): 348
+0000.684 (0) Table wp_term_relationships: Total rows added: 348 in 0.01 seconds
+0000.687 (0) Table wp_term_relationships: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_term_relationships.table.gz - 1.2 Kb)
+0000.703 (0) Table wp_term_taxonomy: Total expected rows (approximate): 2
+0000.708 (0) Table wp_term_taxonomy: Total rows added: 2 in 0.00 seconds
+0000.712 (0) Table wp_term_taxonomy: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_term_taxonomy.table.gz - 0.4 Kb)
+0000.722 (0) Table wp_termmeta: Total expected rows (approximate): 0
+0000.728 (0) Table wp_termmeta: Total rows added: 0 in 0.00 seconds
+0000.732 (0) Table wp_termmeta: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_termmeta.table.gz - 0.4 Kb)
+0000.748 (0) Table wp_terms: Total expected rows (approximate): 113
+0000.755 (0) Table wp_terms: Total rows added: 113 in 0.00 seconds
+0000.759 (0) Table wp_terms: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_terms.table.gz - 1.9 Kb)
+0000.769 (0) Table wp_alm: Total expected rows (approximate): 1
+0000.775 (0) Table wp_alm: Total rows added: 1 in 0.00 seconds
+0000.779 (0) Table wp_alm: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_alm.table.gz - 0.5 Kb)
+0000.791 (0) Table wp_mediafromftp_log: Total expected rows (approximate): 0
+0000.796 (0) Table wp_mediafromftp_log: Total rows added: 0 in 0.00 seconds
+0000.807 (0) Table wp_mediafromftp_log: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_mediafromftp_log.table.gz - 0.4 Kb)
+0000.818 (0) Table wp_rg_form: Total expected rows (approximate): 2
+0000.823 (0) Table wp_rg_form: Total rows added: 2 in 0.00 seconds
+0000.827 (0) Table wp_rg_form: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_form.table.gz - 0.4 Kb)
+0000.837 (0) Table wp_rg_form_meta: Total expected rows (approximate): 2
+0000.843 (0) Table wp_rg_form_meta: Total rows added: 2 in 0.00 seconds
+0000.847 (0) Table wp_rg_form_meta: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_form_meta.table.gz - 2.3 Kb)
+0000.857 (0) Table wp_rg_form_view: Total expected rows (approximate): 4
+0000.863 (0) Table wp_rg_form_view: Total rows added: 4 in 0.00 seconds
+0000.866 (0) Table wp_rg_form_view: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_form_view.table.gz - 0.5 Kb)
+0000.878 (0) Table wp_rg_incomplete_submissions: Total expected rows (approximate): 0
+0000.883 (0) Table wp_rg_incomplete_submissions: Total rows added: 0 in 0.00 seconds
+0000.887 (0) Table wp_rg_incomplete_submissions: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_incomplete_submissions.table.gz - 0.4 Kb)
+0000.903 (0) Table wp_rg_lead: Total expected rows (approximate): 0
+0000.909 (0) Table wp_rg_lead: Total rows added: 0 in 0.00 seconds
+0000.913 (0) Table wp_rg_lead: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_lead.table.gz - 0.5 Kb)
+0000.925 (0) Table wp_rg_lead_detail: Total expected rows (approximate): 0
+0000.930 (0) Table wp_rg_lead_detail: Total rows added: 0 in 0.00 seconds
+0000.934 (0) Table wp_rg_lead_detail: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_lead_detail.table.gz - 0.4 Kb)
+0000.945 (0) Table wp_rg_lead_detail_long: Total expected rows (approximate): 0
+0000.950 (0) Table wp_rg_lead_detail_long: Total rows added: 0 in 0.00 seconds
+0000.954 (0) Table wp_rg_lead_detail_long: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_lead_detail_long.table.gz - 0.3 Kb)
+0000.965 (0) Table wp_rg_lead_meta: Total expected rows (approximate): 0
+0000.970 (0) Table wp_rg_lead_meta: Total rows added: 0 in 0.00 seconds
+0000.973 (0) Table wp_rg_lead_meta: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_lead_meta.table.gz - 0.4 Kb)
+0000.984 (0) Table wp_rg_lead_notes: Total expected rows (approximate): 0
+0000.988 (0) Table wp_rg_lead_notes: Total rows added: 0 in 0.00 seconds
+0000.992 (0) Table wp_rg_lead_notes: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_lead_notes.table.gz - 0.4 Kb)
+0001.006 (0) Table wp_wplnst_scans: Total expected rows (approximate): 2
+0001.012 (0) Table wp_wplnst_scans: Total rows added: 2 in 0.00 seconds
+0001.017 (0) Table wp_wplnst_scans: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_wplnst_scans.table.gz - 1.4 Kb)
+0001.033 (0) Table wp_wplnst_scans_objects: Total expected rows (approximate): 0
+0001.044 (0) Table wp_wplnst_scans_objects: Total rows added: 0 in 0.01 seconds
+0001.048 (0) Table wp_wplnst_scans_objects: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_wplnst_scans_objects.table.gz - 0.4 Kb)
+0001.067 (0) Table wp_wplnst_urls: Total expected rows (approximate): 487
+0001.130 (0) Table wp_wplnst_urls: Total rows added: 487 in 0.06 seconds
+0001.135 (0) Table wp_wplnst_urls: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_wplnst_urls.table.gz - 29.6 Kb)
+0001.148 (0) Table wp_wplnst_urls_locations: Total expected rows (approximate): 934
+0001.234 (0) Table wp_wplnst_urls_locations: Total rows added: 934 in 0.08 seconds
+0001.238 (0) Table wp_wplnst_urls_locations: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_wplnst_urls_locations.table.gz - 28.8 Kb)
+0001.251 (0) Table wp_wplnst_urls_locations_att: Total expected rows (approximate): 0
+0001.256 (0) Table wp_wplnst_urls_locations_att: Total rows added: 0 in 0.00 seconds
+0001.260 (0) Table wp_wplnst_urls_locations_att: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_wplnst_urls_locations_att.table.gz - 0.4 Kb)
+0001.272 (0) Table wp_wplnst_urls_status: Total expected rows (approximate): 896
+0001.361 (0) Table wp_wplnst_urls_status: Total rows added: 896 in 0.09 seconds
+0001.371 (0) Table wp_wplnst_urls_status: finishing file (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_wplnst_urls_status.table.gz - 45.3 Kb)
+0001.382 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_options.table.gz (1/29): adding to final database dump
+0001.390 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_users.table.gz (2/29): adding to final database dump
+0001.393 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_usermeta.table.gz (3/29): adding to final database dump
+0001.396 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_commentmeta.table.gz (4/29): adding to final database dump
+0001.399 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_comments.table.gz (5/29): adding to final database dump
+0001.403 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_links.table.gz (6/29): adding to final database dump
+0001.411 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_postmeta.table.gz (7/29): adding to final database dump
+0001.458 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_posts.table.gz (8/29): adding to final database dump
+0001.517 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_term_relationships.table.gz (9/29): adding to final database dump
+0001.520 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_term_taxonomy.table.gz (10/29): adding to final database dump
+0001.523 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_termmeta.table.gz (11/29): adding to final database dump
+0001.526 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_terms.table.gz (12/29): adding to final database dump
+0001.530 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_alm.table.gz (13/29): adding to final database dump
+0001.533 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_mediafromftp_log.table.gz (14/29): adding to final database dump
+0001.536 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_form.table.gz (15/29): adding to final database dump
+0001.538 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_form_meta.table.gz (16/29): adding to final database dump
+0001.542 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_form_view.table.gz (17/29): adding to final database dump
+0001.545 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_incomplete_submissions.table.gz (18/29): adding to final database dump
+0001.547 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_lead.table.gz (19/29): adding to final database dump
+0001.550 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_lead_detail.table.gz (20/29): adding to final database dump
+0001.553 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_lead_detail_long.table.gz (21/29): adding to final database dump
+0001.556 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_lead_meta.table.gz (22/29): adding to final database dump
+0001.558 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_rg_lead_notes.table.gz (23/29): adding to final database dump
+0001.567 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_wplnst_scans.table.gz (24/29): adding to final database dump
+0001.576 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_wplnst_scans_objects.table.gz (25/29): adding to final database dump
+0001.585 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_wplnst_urls.table.gz (26/29): adding to final database dump
+0001.594 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_wplnst_urls_locations.table.gz (27/29): adding to final database dump
+0001.606 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_wplnst_urls_locations_att.table.gz (28/29): adding to final database dump
+0001.609 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db-table-wp_wplnst_urls_status.table.gz (29/29): adding to final database dump
+0001.627 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db.gz: finished writing out complete database file (416 Kb)
+0001.646 (0) Total database tables backed up: 29 (backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db.gz, size: 444821, checksum (SHA1): cc573be1da2ae3d19d1306e7fe7b9f1bddb187c8)
+0001.651 (0) Saving backup history
+0001.661 (0) backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db.gz: db: This file has not yet been successfully uploaded: will queue
+0001.667 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0001.675 (0) Cloud backup selection (1/1): none (last)
+0001.678 (0) No remote despatch: user chose no remote backup service
+0001.683 (0) Recording as successfully uploaded: backup_2016-07-27-1004_Menthalia_dd603dc28d7f-db.gz (60019c6a1b17b8d9c3044563a96483d7)
+0001.698 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0001.701 (0) Number of backup sets in history: 3
+0001.704 (0) Examining backup set with datestamp: 1469606654 (Jul 27 2016 08:04:14)
+0001.714 (0) 1469606654: this backup set remains non-empty (0/1); will retain in history
+0001.717 (0) Examining backup set with datestamp: 1469030017 (Jul 20 2016 15:53:37)
+0001.726 (0) 1469030017: this backup set remains non-empty (0/1); will retain in history
+0001.729 (0) Examining backup set with datestamp: 1469000982 (Jul 20 2016 07:49:42)
+0001.732 (0) 1469000982: db: this set includes a database (backup_2016-07-20-0949_Menthalia_27408da55068-db.gz); db count is now 3
+0001.735 (0) 1469000982: db: over retain limit (2); will delete this database
+0001.738 (0) Delete file: backup_2016-07-20-0949_Menthalia_27408da55068-db.gz, service=none
+0001.744 (0) 1469000982: this backup set is now empty; will remove from history
+0001.748 (0) 1469000982: corresponding log file not found - must have already been deleted
+0001.751 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0001.760 (0) Resume backup (dd603dc28d7f, 0): finish run
+0001.767 (0) Decremented the semaphore (d) by 1
+0001.772 (0) Semaphore (d) unlocked
+0001.775 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0001.784 (0) The backup apparently succeeded and is now complete
+0001.787 (0) No email will/can be sent - the user has not configured an email address.
+0001.790 (0) Il backup apparentemente è riuscito ed ora è completo
+0000.000 (1) Opened log file at time: Wed, 27 Jul 2016 08:09:18 +0000 on http://192.168.1.18/menthalia/wp
+0000.003 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.11.21.22 WP: 4.5.3 PHP: 5.6.19 (Windows NT WEB 6.2 build 9200 (Windows 8 Professional Edition) i586) MySQL: 5.5.5 Server: Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.19 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 28M | 28.5M) multisite: N mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.006 (1) Free space on disk containing Updraft's temporary directory: 166254.6 Mb
+0000.009 (1) This backup task is either complete or began over 2 days ago: ending (1469606958.5353, )

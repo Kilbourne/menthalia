@@ -14,7 +14,7 @@ foreach ($right_clienti as $key => $cliente){
   $image=get_the_post_thumbnail( $id )?get_the_post_thumbnail( $id ):'<div class="placeholder"></div>';
   $link=get_field('link_cliente',$id);
 $display_clienti['list'].='<li class="cliente '.$active.'">';
-if($link)$display_clienti['list'].='<a href="'.$link.'">';
+if($link)$display_clienti['list'].='<a href="'.$link.'" target="_blank">';
 $display_clienti['list'].=$image;
 if($link)$display_clienti['list'].='</a></li>';
 

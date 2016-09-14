@@ -13,8 +13,8 @@ $video_poster=get_field('video_poster','options');
  ?>
  <section id="intro-video">
  		<video id="video_background" preload="auto" autoplay="true" poster="<?php 	echo $video_poster ?>" >
- 		<source src="<?php echo $video_webm; ?>" type="video/webm">
-        <source src="<?php echo $video_mp4; ?>" type="video/mp4">
+ 		<source src="<?php echo $video_mp4; ?>" type="video/mp4">
+ 		<source src="<?php echo $video_webm; ?>" type="video/webm">        
         <source src="<?php echo $video_ogv; ?>" type="video/ogg">
 
 
@@ -32,8 +32,8 @@ $video_poster=get_field('video_poster','options');
 	<?php
 		foreach ($aree_menthalia as $key => $value) {
 			$post_id=$value->ID;
-			$image=get_field('icona_home',$post_id);
-
+			$image=wp_get_attachment_image(get_field('icona_home',$post_id) ,'full');
+			$image = str_replace( 'class="', 'class="menthalia-effect1 ', $image );
 			$url=get_field('link_esterno',$post_id);
 			$link=$url ? $url : get_permalink($post_id) ;
 			$colore=get_field('colore_area',$post_id);
@@ -42,7 +42,7 @@ $video_poster=get_field('video_poster','options');
 			?>
 		<li class="aree-menthalia" style="background-color:<?php echo $colore; ?>" >
 			<div class="container">
-			<?php echo '<a class="area-image area-child '.$side.'" href="'. $link.'" '.($url?'target="_blank"':'').' >'.wp_get_attachment_image( $image ,'full').'</a>';
+			<?php echo '<a class="area-image area-child '.$side.'" href="'. $link.'" '.($url?'target="_blank"':'').' >'. $image.'</a>';
 				echo '<a class="area-title area-child" href="'.  $link.'"  '.($url?'target="_blank"':'').'  ><h3>'.get_the_title( $post_id ).'<span class="subtitle">'.$subtitle.'</span></h3></a><a class="area-content area-child" href="'. $link.'"   '.($url?'target="_blank"':'').' ><p>'.$value->post_content.'</p></a>';
 
 			?>

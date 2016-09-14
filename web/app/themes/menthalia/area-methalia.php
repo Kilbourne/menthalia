@@ -39,6 +39,9 @@ $right_services=array_filter($services, function($service) {
     return in_array(get_the_ID(),get_field('area',$service->ID));
 });
 if ($right_services) include 'templates/area-service.php';
+if (is_page('ecm' ) || is_page('medical-agency')){
+  get_template_part('templates/comitato');
+}
  $orderby=is_page('medical-agency')?'title':'date';
  $order=is_page('medical-agency')?'ASC':'DESC';
 $clienti=get_posts(

@@ -5,9 +5,10 @@ use Roots\Sage\Extras;
 
 ?><div class="inner">	<?php
 echo Extras\back_link();
-if($detect->is_mobile()){
+var_dump($detect->isMobile());
+if($detect->isMobile()){
 
-Menthalia\ajax_load_more('eventi');
+Menthalia\ajax_load_more('eventi',5,2,4);
 
 }else{
 while (have_posts()) : the_post();

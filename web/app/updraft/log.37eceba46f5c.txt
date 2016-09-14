@@ -158,3 +158,11 @@
 0000.003 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.11.21.22 WP: 4.5.3 PHP: 5.6.19 (Windows NT WEB 6.2 build 9200 (Windows 8 Professional Edition) i586) MySQL: 5.5.5 Server: Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.19 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 27.9M | 28.5M) multisite: N mcrypt: Y LANG:  ZipArchive::addFile: Y
 0000.005 (1) Free space on disk containing Updraft's temporary directory: 179568.9 Mb
 0000.008 (1) This backup task is either complete or began over 2 days ago: ending (1469202921.3953, )
+0000.000 (1) Opened log file at time: Wed, 27 Jul 2016 07:31:51 +0000 on http://192.168.1.18/menthalia/wp
+0000.003 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.11.21.22 WP: 4.5.3 PHP: 5.6.19 (Windows NT WEB 6.2 build 9200 (Windows 8 Professional Edition) i586) MySQL: 5.5.5 Server: Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.19 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 28M | 28.8M) multisite: N mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.006 (1) Free space on disk containing Updraft's temporary directory: 166522.7 Mb
+0000.009 (1) This backup task is either complete or began over 2 days ago: ending (1469604711.1923, )
+0000.000 (1) Opened log file at time: Wed, 27 Jul 2016 07:37:54 +0000 on http://192.168.1.18/menthalia/wp
+0000.003 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.11.21.22 WP: 4.5.3 PHP: 5.6.19 (Windows NT WEB 6.2 build 9200 (Windows 8 Professional Edition) i586) MySQL: 5.5.5 Server: Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.19 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 27.9M | 28.8M) multisite: N mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.005 (1) Free space on disk containing Updraft's temporary directory: 166482.3 Mb
+0000.008 (1) This backup task is either complete or began over 2 days ago: ending (1469605074.3307, )

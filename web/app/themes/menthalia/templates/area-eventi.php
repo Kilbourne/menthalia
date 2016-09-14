@@ -1,4 +1,5 @@
 <section id="ecm-event-list" class="archivio-eventi">
+<div class="eventi-cont">	
  <?php
 if ($events) { ?>
 
@@ -22,4 +23,5 @@ $date=DateTime::createFromFormat('Ymd',get_field('data',$id));
 <?php } ?>
 <a class="archivio-link" href="<?php echo get_post_type_archive_link( 'eventi' ); ?>"><?php _e('Consulta l\'archivio degli eventi passati.', 'sage'); ?></a>
 <?php   } ?>
+</div>
 </section>

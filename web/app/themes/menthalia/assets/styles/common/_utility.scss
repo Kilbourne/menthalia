@@ -35,3 +35,17 @@ font-size: 1.2em;}
     font-size: 1em;
     color:#000;
 }
+.menthalia-effect{
+            transition: transform 1s;
+
+        &:hover{
+            transform: scale(1.2) rotate(30deg);
+        }
+        }
+        .menthalia-effect1{
+            transition: transform 1s;
+
+        &:hover{
+            transform: rotate(30deg);
+        }
+        }
